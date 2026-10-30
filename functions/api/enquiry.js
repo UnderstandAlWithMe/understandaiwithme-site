@@ -1,10 +1,9 @@
 // Cloudflare Pages Function: receives the "build an AI automation" form
-// and stores it in Systeme.io as a contact tagged "build-enquiry".
+// and stores it in Systeme.io as a contact with a "Build enquiry" field.
 // Needs one encrypted environment variable in Cloudflare Pages:
 //   SYSTEME_API_KEY  (created in Systeme.io > Settings > MCP & API keys)
 
 const API = "https://api.systeme.io/api";
-const TAG = "build-enquiry";
 const FIELD = { name: "Build enquiry", slug: "build_enquiry" };
 
 export async function onRequestPost({ request, env }) {
@@ -62,11 +61,8 @@ export async function onRequestPost({ request, env }) {
       });
     }
 
-    const tags = await (await call("/tags?limit=100")).json();
-    let tag = (tags.items || []).find((t) => t.name === TAG);
-    if (!tag) tag = await (await call("/tags", "POST", { name: TAG })).json();
-    if (tag && tag.id) await call(`/contacts/${contact.id}/tags`, "POST", { tagId: tag.id });
-
+    // Free Systeme plan allows only one tag, so enquiries are found by the
+    // "Build enquiry" custom field (CRM > Contacts > filter: Build enquiry).
     return redirect(request, "thanks");
   } catch (err) {
     return redirect(request, "error");
