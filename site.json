@@ -1,0 +1,174 @@
+{
+  "site_name": "UnderstandAIwithMe",
+  "site_url": "https://understandaiwithme.co.uk",
+  "tagline": "Practical AI for real work. No coding, no hype.",
+  "youtube": "https://www.youtube.com/@UnderstandAIwithMe",
+  "tiktok": "https://www.tiktok.com/@understandaiwithme",
+  "email_signup_url": "https://mindriseco88.systeme.io/admin-fix",
+  "enquiry_form_action": "",
+  "tiles": [
+    {
+      "slug": "build-ai-automation",
+      "label": "Have someone build an AI automation for my business",
+      "short": "Build it for me",
+      "icon": "spark",
+      "headline": "You picked: get an AI automation built for your business",
+      "intro": "If the same admin task eats hours every week, a small custom AI workflow can usually take most of it away. You describe the problem; a specialist team scopes and builds it.",
+      "tips": [
+        "Pick one repetitive task first: quotes, onboarding emails, document checks or reporting.",
+        "Write down how long it takes per week and who does it. That number decides whether a build is worth it.",
+        "Start with a small pilot, then extend. Avoid big-bang projects."
+      ],
+      "offer_type": "enquiry",
+      "offer_name": "a vetted AI automation partner",
+      "cta": "Tell us about the task",
+      "featured": true
+    },
+    {
+      "slug": "payroll-takes-forever",
+      "label": "Payroll and HR admin take forever",
+      "short": "Payroll and HR",
+      "icon": "pay",
+      "headline": "You picked: payroll and HR admin take forever",
+      "intro": "For teams of roughly 1 to 50, most payroll pain comes from spreadsheets, re-keying and chasing paperwork. An all-in-one HR and payroll platform removes most of it.",
+      "tips": [
+        "List every place staff data lives today. Each copy is a chance for errors.",
+        "Look for payroll, leave, onboarding and documents in one system.",
+        "Book a demo with your real pay run in mind and ask them to walk through it."
+      ],
+      "offer_type": "pending",
+      "offer_name": "Employment Hero",
+      "cta": "Book a free demo"
+    },
+    {
+      "slug": "too-many-tools",
+      "label": "Too many HR, payroll and IT tools",
+      "short": "Too many tools",
+      "icon": "stack",
+      "headline": "You picked: too many HR, payroll and IT tools",
+      "intro": "Once a business passes about 15 staff, separate tools for payroll, devices, accounts and benefits start costing real hours. One connected platform can handle new starters end to end.",
+      "tips": [
+        "Count the tools a new starter touches in week one.",
+        "Map who updates what when someone joins, moves or leaves.",
+        "Ask any vendor to demo a full starter-to-leaver journey."
+      ],
+      "offer_type": "pending",
+      "offer_name": "Rippling",
+      "cta": "See a demo"
+    },
+    {
+      "slug": "business-bank-account",
+      "label": "I need a business bank account",
+      "short": "Business banking",
+      "icon": "bank",
+      "headline": "You picked: you need a business bank account",
+      "intro": "Keeping business money separate makes bookkeeping, tax returns and invoicing far easier, even for sole traders.",
+      "tips": [
+        "Check fees per transaction, not just the monthly price.",
+        "Look for invoicing and receipt capture built in.",
+        "Make sure it connects to your accounting software."
+      ],
+      "offer_type": "pending",
+      "offer_name": "Tide",
+      "cta": "Open an account"
+    },
+    {
+      "slug": "cash-flow",
+      "label": "Cash flow is tight",
+      "short": "Cash flow",
+      "icon": "flow",
+      "headline": "You picked: cash flow is tight",
+      "intro": "Most cash-flow problems are timing problems: money is owed to you, but not yet paid. Fix the timing first, then look at funding.",
+      "tips": [
+        "Send invoices the day work finishes and automate reminders.",
+        "Forecast the next 13 weeks of money in and out.",
+        "If you need funding, compare total cost, not just the monthly payment."
+      ],
+      "offer_type": "pending",
+      "offer_name": "Century Business Finance",
+      "cta": "Check your options",
+      "finance": true
+    },
+    {
+      "slug": "need-an-accountant",
+      "label": "I need an accountant",
+      "short": "Accountant",
+      "icon": "calc",
+      "headline": "You picked: you need an accountant",
+      "intro": "A good online accountant handles your returns, bookkeeping and deadlines for a fixed monthly fee, so you are not chasing HMRC dates yourself.",
+      "tips": [
+        "Ask exactly what the monthly fee includes: payroll, VAT, year-end.",
+        "Check they work with the accounting software you already use.",
+        "Get a named contact, not just a ticket queue."
+      ],
+      "offer_type": "live",
+      "offer_name": "Caroola Accountancy",
+      "offer_url": "https://caroolaaccountancy.sjv.io/VO9dQj",
+      "cta": "Get a quote from Caroola"
+    },
+    {
+      "slug": "receipts-and-expenses",
+      "label": "Receipts and expenses are chaos",
+      "short": "Expenses",
+      "icon": "receipt",
+      "headline": "You picked: receipts and expenses are chaos",
+      "intro": "Shared company cards and paper receipts create hours of month-end reconciliation. Expense cards that capture receipts at the point of purchase remove most of it.",
+      "tips": [
+        "Give each spender their own card with a set limit.",
+        "Capture the receipt photo at the moment of purchase.",
+        "Sync automatically to your accounting software."
+      ],
+      "offer_type": "pending",
+      "offer_name": "Soldo",
+      "cta": "Book a demo"
+    },
+    {
+      "slug": "take-card-payments",
+      "label": "Customers can't pay by card",
+      "short": "Card payments",
+      "icon": "card",
+      "headline": "You picked: customers can't pay by card",
+      "intro": "Trades, market stalls, cafes and salons lose sales and time chasing cash or bank transfers. A simple card reader or payment link fixes it.",
+      "tips": [
+        "Compare the fee per transaction against your average sale.",
+        "Use payment links for jobs paid after the work is done.",
+        "Check how quickly money lands in your account."
+      ],
+      "offer_type": "pending",
+      "offer_name": "SumUp",
+      "cta": "See card readers"
+    },
+    {
+      "slug": "hire-help",
+      "label": "I just need someone to do it",
+      "short": "Hire help",
+      "icon": "person",
+      "headline": "You picked: you just need someone to do it",
+      "intro": "Sometimes the right fix is a person, not software: a freelance bookkeeper, a virtual assistant or someone to set things up once.",
+      "tips": [
+        "Write a one-page brief: the task, the hours, the outcome.",
+        "Start with a small paid trial task.",
+        "Keep logins in a password manager and share access, not passwords."
+      ],
+      "offer_type": "pending",
+      "offer_name": "Upwork",
+      "cta": "Find a freelancer"
+    },
+    {
+      "slug": "not-sure",
+      "label": "Not sure: show me where my time goes",
+      "short": "Not sure yet",
+      "icon": "clock",
+      "headline": "You picked: not sure yet",
+      "intro": "That is the most common answer. Join the free list and get a short series that helps you find the admin tasks costing you the most hours, and what to fix first.",
+      "tips": [
+        "For one week, jot down every admin task and how long it took.",
+        "Circle anything you do more than twice a week.",
+        "That circled list is where AI or better tools pay off first."
+      ],
+      "offer_type": "email",
+      "offer_name": "the free admin-time series",
+      "cta": "Send me the series"
+    }
+  ]
+}
