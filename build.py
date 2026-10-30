@@ -122,6 +122,7 @@ def enquiry_form():
     )
     return f"""<form class="offer form" method="post" action="{e(action)}">
 <p>Describe the task. We pass an anonymous summary to a vetted AI automation partner, who replies with whether it fits and a rough estimate. No obligation.</p>
+<input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
 <label>Your name<input name="name" required{disabled}></label>
 <label>Work email<input type="email" name="email" required{disabled}></label>
 <label>Team size<select name="team_size"{disabled}><option>1-10</option><option>11-50</option><option>51-200</option><option>200+</option></select></label>
@@ -286,6 +287,8 @@ def main():
     OUT.mkdir()
     shutil.copy(ROOT / "assets" / "style.css", OUT / "style.css")
     paths = [build_home()] + build_tile_pages() + build_guides() + build_legal()
+    page("/fix/build-ai-automation/thanks/", "Enquiry received | UnderstandAIwithMe", "Your enquiry has been received.", '<section class="wrap narrow hero"><h1>Thanks, your enquiry is in</h1><p class="lead">We will review it and send an anonymous summary to our AI automation partner. Expect a reply by email within two working days with whether it fits and a rough estimate.</p><p><a class="btn ghost" href="/guides/">Read the guides meanwhile</a></p></section>')
+    page("/fix/build-ai-automation/error/", "Something went wrong | UnderstandAIwithMe", "The enquiry could not be sent.", '<section class="wrap narrow hero"><h1>Sorry, that did not go through</h1><p class="lead">Please go back and try again in a minute. If it keeps failing, <a href="'+CFG["email_signup_url"]+'">join the list</a> and reply to the first email with your task.</p></section>')
     page("/404.html", "Page not found | UnderstandAIwithMe", "Page not found.", '<section class="wrap narrow"><h1>Page not found</h1><p><a href="/">Back to the start</a></p></section>')
     urls = "".join(f"<url><loc>{URL}{p}</loc><lastmod>{TODAY}</lastmod></url>" for p in paths)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>', encoding="utf-8")

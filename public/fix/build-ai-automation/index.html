@@ -27,18 +27,19 @@
 <h2>Three things to do first</h2>
 <ol class="tips"><li>Pick one repetitive task first: quotes, onboarding emails, document checks or reporting.</li><li>Write down how long it takes per week and who does it. That number decides whether a build is worth it.</li><li>Start with a small pilot, then extend. Avoid big-bang projects.</li></ol>
 <h2>The fastest fix</h2>
-<form class="offer form" method="post" action="">
+<form class="offer form" method="post" action="/api/enquiry">
 <p>Describe the task. We pass an anonymous summary to a vetted AI automation partner, who replies with whether it fits and a rough estimate. No obligation.</p>
-<label>Your name<input name="name" required disabled></label>
-<label>Work email<input type="email" name="email" required disabled></label>
-<label>Team size<select name="team_size" disabled><option>1-10</option><option>11-50</option><option>51-200</option><option>200+</option></select></label>
-<label>The task you want automated<textarea name="task" rows="4" required disabled></textarea></label>
-<label>Hours it takes per week (rough)<input name="hours" disabled></label>
-<label>Budget, if known<select name="budget" disabled><option>Not sure yet</option><option>Under £5k</option><option>£5k-£15k</option><option>£15k-£50k</option><option>£50k+</option></select></label>
-<label>When do you need it?<select name="timing" disabled><option>This month</option><option>Next 3 months</option><option>Just exploring</option></select></label>
-<button class="btn" type="submit" disabled>Send my enquiry</button>
+<input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<label>Your name<input name="name" required></label>
+<label>Work email<input type="email" name="email" required></label>
+<label>Team size<select name="team_size"><option>1-10</option><option>11-50</option><option>51-200</option><option>200+</option></select></label>
+<label>The task you want automated<textarea name="task" rows="4" required></textarea></label>
+<label>Hours it takes per week (rough)<input name="hours"></label>
+<label>Budget, if known<select name="budget"><option>Not sure yet</option><option>Under £5k</option><option>£5k-£15k</option><option>£15k-£50k</option><option>£50k+</option></select></label>
+<label>When do you need it?<select name="timing"><option>This month</option><option>Next 3 months</option><option>Just exploring</option></select></label>
+<button class="btn" type="submit">Send my enquiry</button>
 <p class="small">We only use your details to respond to this enquiry. We may earn a referral fee from the partner. See <a href="/privacy/">Privacy</a>.</p>
-<p class="small">Enquiries open shortly. Meanwhile, <a href="https://mindriseco88.systeme.io/admin-fix">join the list</a> and we will be in touch.</p>
+
 </form>
 
 </section>
