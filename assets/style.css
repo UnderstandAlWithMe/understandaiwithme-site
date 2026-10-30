@@ -180,3 +180,4 @@ footer .cols p a { display: inline; }
 .result a:not(.btn) { color: #7dd3c8; }
 .card.cta a:not(.btn) { color: #7dd3c8; }
 @media (max-width: 640px) { .top { position: static; } .progress { top: 0; } }
+.photo { display: block; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--teal-soft), var(--shadow); margin-bottom: 16px; }

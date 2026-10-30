@@ -258,7 +258,7 @@ def build_home():
 <p><a href="/guides/">All guides &rarr;</a></p>
 </section>
 <section class="wrap split" style="margin-top:32px">
-<div><p class="eyebrow">Who&rsquo;s behind this</p><h2 style="margin-top:0">Practical AI for real work</h2>
+<div><img class="photo" src="/constantin-160.webp" width="88" height="88" alt="Constantin" loading="lazy"><p class="eyebrow">Who&rsquo;s behind this</p><h2 style="margin-top:0">Practical AI for real work</h2>
 <p>I&rsquo;m Constantin. I build AI workflows and explain them in plain English on <a href="{CFG['youtube']}" rel="noopener">YouTube</a> and <a href="{CFG['tiktok']}" rel="noopener">TikTok</a>. This site turns those videos into step-by-step guides, and points you to tools I&rsquo;d actually use.</p>
 <p><a class="btn ghost" href="/about/">More about this site</a></p></div>
 <div class="card signup"><h3>Not sure where to start?</h3><p>Join the free list for a short series on finding the admin tasks that cost you most, and what to fix first.</p><a class="btn" href="{CFG['email_signup_url']}">Get the free series</a><p class="small">Free. Unsubscribe any time.</p></div>
@@ -516,7 +516,7 @@ def build_about():
 <p class="lead">UnderstandAIwithMe helps small businesses and busy professionals get hours back from admin, using AI where it genuinely helps and better tools or people where it doesn&rsquo;t.</p>
 </div></section>
 <section class="wrap narrow">
-<div class="card" style="margin-top:8px"><div class="avatar" aria-hidden="true">C</div>
+<div class="card" style="margin-top:8px"><img class="photo" src="/constantin-400.webp" width="120" height="120" alt="Constantin, founder of UnderstandAIwithMe">
 <h2 style="margin-top:0">Hi, I&rsquo;m Constantin</h2>
 <p>I build AI workflows and explain them in plain English on <a href="{CFG['youtube']}" rel="noopener">YouTube</a> and <a href="{CFG['tiktok']}" rel="noopener">TikTok</a>. Most of the people I talk to don&rsquo;t need an &ldquo;AI strategy&rdquo;. They need the invoice reminders to go out on time, payroll to stop eating a day, and fewer copy-and-paste jobs.</p>
 <p>This site is where the videos turn into step-by-step guides, plus a short list of tools and partners I&rsquo;d actually use.</p></div>
@@ -526,7 +526,7 @@ def build_about():
 <ul><li><b>Useful first.</b> Every guide must contain steps you can do today, even if you never click a link.</li><li><b>One recommendation per problem.</b> Not a list of twenty. If we wouldn&rsquo;t use it, it isn&rsquo;t here.</li><li><b>Clear about money.</b> We may earn a commission when you sign up through a link. It never changes your price. See the <a href="/disclosure/">disclosure</a>.</li><li><b>Not financial advice.</b> For finance products, always check the provider&rsquo;s own terms and costs.</li></ul>
 <div class="card cta"><h3>Start with your biggest time sink</h3><p>Two minutes with the calculator shows which admin task to fix first.</p><a class="btn" href="/tools/admin-time-calculator/">Open the calculator</a></div>
 </section>"""
-    person = {"@context": "https://schema.org", "@type": "AboutPage", "url": URL + "/about/", "mainEntity": {"@type": "Person", "name": "Constantin", "url": URL + "/about/", "sameAs": [CFG["youtube"], CFG["tiktok"]]}}
+    person = {"@context": "https://schema.org", "@type": "AboutPage", "url": URL + "/about/", "mainEntity": {"@type": "Person", "name": "Constantin", "url": URL + "/about/", "image": URL + "/constantin-400.jpg", "sameAs": [CFG["youtube"], CFG["tiktok"]]}}
     return [page("/about/", "About UnderstandAIwithMe | Practical AI for small businesses", "Who is behind UnderstandAIwithMe, how the site works and how it makes money.", body, [person, crumbs(("About", "/about/"))])]
 
 
