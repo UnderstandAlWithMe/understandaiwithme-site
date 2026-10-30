@@ -61,8 +61,11 @@ export async function onRequestPost({ request, env }) {
       });
     }
 
-    // Free Systeme plan allows only one tag, so enquiries are found by the
-    // "Build enquiry" custom field (CRM > Contacts > filter: Build enquiry).
+    // Tag the contact "build-enquiry" (tag already exists in Systeme; free plan allows one tag).
+    const tags = await (await call("/tags?limit=100")).json();
+    const tag = (tags.items || []).find((t) => t.name === "build-enquiry");
+    if (tag) await call(`/contacts/${contact.id}/tags`, "POST", { tagId: tag.id });
+
     return redirect(request, "thanks");
   } catch (err) {
     return redirect(request, "error");
