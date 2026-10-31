@@ -66,6 +66,24 @@ export async function onRequestPost({ request, env }) {
     const tag = (tags.items || []).find((t) => t.name === "build-enquiry");
     if (tag) await call(`/contacts/${contact.id}/tags`, "POST", { tagId: tag.id });
 
+    // Instant alert to Constantin: phone push (ntfy app, topic below) + email to hello@ (forwards to Gmail).
+    try {
+      await fetch(`https://ntfy.sh/${env.NTFY_TOPIC || "uaiwm-leads-b36a69a28c42"}`, {
+        method: "POST",
+        headers: {
+          Title: "New build enquiry",
+          Tags: "moneybag",
+          Priority: "high",
+          Email: "hello@understandaiwithme.com",
+          Click: "https://systeme.io/dashboard/contacts",
+        },
+        // No name/email here (third-party service): details are in Systeme > Contacts > tag build-enquiry.
+        body: `Team size: ${form.get("team_size") || "-"}\nHours per week: ${String(form.get("hours") || "-").slice(0, 40)}\nBudget: ${form.get("budget") || "-"}\nTiming: ${form.get("timing") || "-"}\n\nOpen Systeme Contacts (tag: build-enquiry) for the name, email and task. Reply within a day, then pass to Digital One quoting REF-CONSTANT266.`,
+      });
+    } catch (e) {
+      // never block the visitor on a failed alert
+    }
+
     return redirect(request, "thanks");
   } catch (err) {
     return redirect(request, "error");

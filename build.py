@@ -381,9 +381,13 @@ def build_legal():
 <p>We only recommend tools and partners we believe fit the problem described. Commission never changes the price you pay.</p>
 <p>We are not financial advisers. Finance products are subject to the provider's own eligibility checks and terms.</p></section>"""
     privacy = """<section class="wrap narrow"><h1>Privacy</h1>
-<p><b>What we collect:</b> if you join our email list or send an enquiry, we store the details you give us (such as your name, email and the task you describe).</p>
-<p><b>Why:</b> to send you the emails you asked for, or to respond to your enquiry. For build enquiries we share an anonymous summary with a vetted partner first; we only share your company details with your agreement.</p>
-<p><b>Your rights:</b> you can unsubscribe at any time from any email, and ask us to see or delete your data by replying to any of our emails.</p>
+<p><b>Who we are:</b> UnderstandAIwithMe is run by Constantin Obreja. Contact: <a href="mailto:hello@understandaiwithme.com">hello@understandaiwithme.com</a>. Postal address: 29 Brickett Close, Ruislip, HA4 7YE, United Kingdom.</p>
+<p><b>What we collect:</b> if you join our email list or send an enquiry, we store the details you give us (such as your name, email address and the task you describe).</p>
+<p><b>Why:</b> to send you the emails you asked for, or to respond to your enquiry (legal basis: your consent and our legitimate interest in answering you). For build enquiries we may introduce you to a vetted partner, such as Digital One Agency; we only share your contact details with your agreement.</p>
+<p><b>Who processes it:</b> email sign-ups and enquiries are stored with our email provider, systeme.io. The site is hosted on Cloudflare. Some of these providers may process data outside your country under their own safeguards.</p>
+<p><b>Analytics:</b> we use Cloudflare Web Analytics, which counts visits without cookies and without tracking you across sites.</p>
+<p><b>How long:</b> we keep your details until you unsubscribe or ask us to delete them.</p>
+<p><b>Your rights:</b> you can unsubscribe at any time from any email, and ask us to see, correct or delete your data by emailing hello@understandaiwithme.com. If you are in the UK or EU you can also complain to your data protection authority (in the UK, the ICO).</p>
 <p>This site does not use advertising cookies. Affiliate partners may set their own cookies when you click through to their sites.</p></section>"""
     return [
         page("/disclosure/", "Affiliate disclosure | UnderstandAIwithMe", "How UnderstandAIwithMe earns money from affiliate and referral links.", disclosure),
