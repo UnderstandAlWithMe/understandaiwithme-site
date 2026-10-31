@@ -329,6 +329,15 @@ def load_guides():
     GUIDES.sort(key=lambda g: (g[0], g[1]), reverse=True)
 
 
+def video_block(meta):
+    vid = meta.get("video", "").strip()
+    if not vid:
+        return ""
+    live = meta.get("video_live", "").strip()
+    return f"""<div class="video" id="guide-video" data-id="{e(vid)}" data-live="{e(live)}" hidden><p class="eyebrow" style="margin-bottom:8px">Prefer video?</p><div class="frame"></div></div>
+<script>(function(){{var b=document.getElementById("guide-video");var l=b.getAttribute("data-live");if(l&&Date.now()<Date.parse(l))return;b.querySelector(".frame").innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+b.getAttribute("data-id")+'" title="Watch the video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';b.hidden=false;}})();</script>"""
+
+
 def build_guides():
     paths = []
     tiles = {t["slug"]: t for t in CFG["tiles"]}
@@ -345,6 +354,7 @@ def build_guides():
 <p class="eyebrow"><a href="/guides/">Guides</a></p>
 <h1>{e(meta['title'])}</h1>
 <p class="meta">By <a href="/about/">Constantin</a> &middot; {e(d)} &middot; {mins} min read</p>
+{video_block(meta)}
 {md_to_html(md)}
 {cta}
 <p class="small">Want numbers for your own business? Try the <a href="/tools/admin-time-calculator/">admin time calculator</a> or the <a href="/tools/ai-readiness-quiz/">AI readiness quiz</a>.</p>

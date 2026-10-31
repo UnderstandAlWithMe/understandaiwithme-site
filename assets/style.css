@@ -183,3 +183,7 @@ footer .cols p a { display: inline; }
 .photo { display: block; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--teal-soft), var(--shadow); margin-bottom: 16px; }
 
 .row select.cur { width: 100%; padding: 11px 12px; font: 600 16px var(--font); border: 1.5px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }
+
+.video { margin: 8px 0 28px; }
+.video .frame { position: relative; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); background: #000; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }

@@ -3,6 +3,8 @@ title: How to Automate Invoice Reminders Without Chasing Anyone
 description: A simple reminder schedule, three ready-to-use email templates and the settings that get small businesses paid faster without awkward phone calls.
 date: 2026-10-24
 tile: cash-flow
+video: m0UZJHNHwBQ
+video_live: 2026-11-01T19:00:00Z
 ---
 Late payment is rarely about customers refusing to pay. Most of the time the invoice went out late, got buried in an inbox, or nobody followed up. The fix is boring and very effective: send invoices the moment work finishes, and let software do the chasing.
 
