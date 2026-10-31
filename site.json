@@ -82,7 +82,7 @@
       "tips": [
         "Send invoices the day work finishes and automate reminders.",
         "Forecast the next 13 weeks of money in and out.",
-        "If you need funding, compare total cost, not just the monthly payment."
+        "If you need funding, compare the total cost, not just the monthly payment."
       ],
       "offer_type": "pending",
       "offer_name": "Century Business Finance",
@@ -95,7 +95,7 @@
       "short": "Accountant",
       "icon": "calc",
       "headline": "You picked: you need an accountant",
-      "intro": "A good online accountant handles your returns, bookkeeping and deadlines for a fixed monthly fee, so you are not chasing HMRC dates yourself.",
+      "intro": "A good online accountant handles your returns, bookkeeping and deadlines for a fixed monthly fee, so you are not chasing tax dates yourself.",
       "tips": [
         "Ask exactly what the monthly fee includes: payroll, VAT, year-end.",
         "Check they work with the accounting software you already use.",
@@ -104,7 +104,8 @@
       "offer_type": "live",
       "offer_name": "Caroola Accountancy",
       "offer_url": "https://caroolaaccountancy.sjv.io/VO9dQj",
-      "cta": "Get a quote from Caroola"
+      "cta": "Get a quote from Caroola",
+      "offer_region": "UK businesses"
     },
     {
       "slug": "receipts-and-expenses",
@@ -169,6 +170,57 @@
       "offer_type": "email",
       "offer_name": "the free admin-time series",
       "cta": "Send me the series"
+    }
+  ],
+  "digital_one_url": "https://digitaloneagency.com.au/?ref=REF-CONSTANT266",
+  "recommended": [
+    {
+      "name": "Digital One Agency",
+      "what": "Done-for-you websites, apps and AI automations.",
+      "who": "Businesses that want a custom AI workflow, app or website built for them.",
+      "url": "https://digitaloneagency.com.au/?ref=REF-CONSTANT266",
+      "cta": "Talk to the build team",
+      "cat": "Get it built"
+    },
+    {
+      "name": "HappyScribe",
+      "what": "AI transcription and meeting notes in 150+ languages.",
+      "who": "Anyone who wants calls, meetings or voice notes turned into text, summaries and subtitles.",
+      "url": "https://happyscribe.sjv.io/oNgMBO",
+      "cta": "Try HappyScribe",
+      "cat": "AI tools"
+    },
+    {
+      "name": "PixVerse",
+      "what": "AI video generation from text and images.",
+      "who": "Small businesses making quick social videos and ads without a camera crew.",
+      "url": "https://motivaiprivatelimited.sjv.io/m4JMbM",
+      "cta": "Try PixVerse",
+      "cat": "AI tools"
+    },
+    {
+      "name": "Moosend",
+      "what": "Email marketing and automation.",
+      "who": "Businesses that want newsletters and automated follow-up emails without a big monthly bill.",
+      "url": "https://trymoo.moosend.com/j8d6afok5fly",
+      "cta": "Try Moosend",
+      "cat": "Marketing"
+    },
+    {
+      "name": "Leadpages",
+      "what": "Landing pages and lead capture.",
+      "who": "Anyone who needs a page that turns visitors into enquiries or sign-ups.",
+      "url": "https://try.leadpages.com/v5qk5qgej33j",
+      "cta": "Try Leadpages",
+      "cat": "Marketing"
+    },
+    {
+      "name": "Caroola Accountancy",
+      "what": "Online accountants on a fixed monthly fee.",
+      "who": "UK businesses that want returns, bookkeeping and deadlines handled.",
+      "url": "https://caroolaaccountancy.sjv.io/VO9dQj",
+      "cta": "Get a quote",
+      "cat": "Money"
     }
   ]
 }

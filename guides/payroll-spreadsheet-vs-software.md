@@ -4,6 +4,8 @@ description: What payroll actually involves in the UK, when a spreadsheet stops 
 date: 2026-10-25
 tile: payroll-takes-forever
 ---
+*This guide covers UK payroll. The same spreadsheet-versus-software logic applies in the US and Australia, but the reporting rules differ.*
+
 When you take on your first employee, payroll can look like a simple sum: hours times rate, minus tax. In practice, it is a set of legal reporting jobs that repeat every pay day. That is why it so often ends up eating a whole day a month.
 
 ## What payroll involves in the UK

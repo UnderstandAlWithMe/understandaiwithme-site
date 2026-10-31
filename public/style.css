@@ -181,3 +181,5 @@ footer .cols p a { display: inline; }
 .card.cta a:not(.btn) { color: #7dd3c8; }
 @media (max-width: 640px) { .top { position: static; } .progress { top: 0; } }
 .photo { display: block; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--teal-soft), var(--shadow); margin-bottom: 16px; }
+
+.row select.cur { width: 100%; padding: 11px 12px; font: 600 16px var(--font); border: 1.5px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }

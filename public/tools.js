@@ -1,6 +1,10 @@
 // Admin time calculator + AI readiness quiz. No tracking, nothing leaves the browser.
 (function () {
-  var gbp = function (n) { return "£" + Math.round(n).toLocaleString("en-GB"); };
+  var money = function (n) {
+    var c = (document.getElementById("currency") || {}).value || "USD";
+    try { return new Intl.NumberFormat(undefined, { style: "currency", currency: c, maximumFractionDigits: 0 }).format(n); }
+    catch (e) { return Math.round(n).toLocaleString(); }
+  };
   var num = function (el) { var v = parseFloat(el.value); return isFinite(v) && v > 0 ? v : 0; };
 
   // ---------- Calculator ----------
@@ -22,11 +26,11 @@
       var cost = yearly * rate;
       var saved = yearly * 0.4;
       out.classList.remove("hidden");
-      out.querySelector("[data-o=hours]").textContent = Math.round(yearly).toLocaleString("en-GB") + " hours";
-      out.querySelector("[data-o=cost]").textContent = rate ? gbp(cost) : "add an hourly cost";
+      out.querySelector("[data-o=hours]").textContent = Math.round(yearly).toLocaleString() + " hours";
+      out.querySelector("[data-o=cost]").textContent = rate ? money(cost) : "add an hourly cost";
       out.querySelector("[data-o=weekly]").textContent = (Math.round(weekly * 10) / 10) + " h";
       out.querySelector("[data-o=days]").textContent = Math.round(yearly / 7.5) + " days";
-      out.querySelector("[data-o=saved]").textContent = Math.round(saved).toLocaleString("en-GB") + " h" + (rate ? " (" + gbp(saved * rate) + ")" : "");
+      out.querySelector("[data-o=saved]").textContent = Math.round(saved).toLocaleString() + " h" + (rate ? " (" + money(saved * rate) + ")" : "");
       out.querySelector("[data-o=top]").textContent = top.getAttribute("data-label");
       out.querySelector("[data-o=topshare]").style.width = Math.round((topH / weekly) * 100) + "%";
       out.querySelector("[data-o=toppct]").textContent = Math.round((topH / weekly) * 100) + "% of your admin time";
@@ -35,6 +39,7 @@
       link.textContent = "See the fastest fix for " + top.getAttribute("data-short").toLowerCase() + " →";
     };
     calc.addEventListener("input", run);
+    calc.addEventListener("change", run);
     calc.addEventListener("submit", function (ev) { ev.preventDefault(); run(); out.scrollIntoView({ behavior: "smooth", block: "start" }); });
     run();
   }

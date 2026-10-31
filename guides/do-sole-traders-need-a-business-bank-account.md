@@ -1,10 +1,10 @@
 ---
-title: Do Sole Traders Need a Business Bank Account?
+title: Do Sole Traders Need a Business Bank Account? (UK Guide)
 description: When a separate business account is required, when it is just a good idea, and what to compare before you open one.
 date: 2026-10-27
 tile: business-bank-account
 ---
-It is one of the most common questions from people starting out, and the answer depends on how your business is set up.
+It is one of the most common questions from people starting out, and the answer depends on how your business is set up. This guide covers the UK rules; in the US, Australia and elsewhere the details differ, but the practical reasons for a separate account are the same.
 
 ## Limited companies: yes
 

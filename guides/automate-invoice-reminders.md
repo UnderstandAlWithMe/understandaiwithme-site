@@ -57,7 +57,7 @@ Once a month, check two things: how many days on average it takes customers to p
 
 ## A note on your rights
 
-In the UK, businesses can claim statutory interest and compensation on late commercial payments under late payment legislation. You do not have to use it, but it helps to know it exists. GOV.UK has a guide on late commercial payments with the current rules.
+Many countries give businesses extra rights when commercial invoices are paid late. In the UK, you can claim statutory interest and compensation under late payment legislation (GOV.UK explains how). In the US and Australia the rules depend on your state and your contract terms, so put clear late-payment terms on your invoices and check your local government business site. You do not have to use these rights, but it helps to know they exist.
 
 ## The short version
 

@@ -51,7 +51,7 @@ def page(path, title, description, body, schema=None, og_type="website", extra="
         for s in ["build-ai-automation", "payroll-takes-forever", "cash-flow", "need-an-accountant", "receipts-and-expenses"]
     )
     doc = f"""<!doctype html>
-<html lang="en-GB">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,7 +70,7 @@ def page(path, title, description, body, schema=None, og_type="website", extra="
 <meta property="og:image" content="{URL}/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_GB">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{e(title)}">
 <meta name="twitter:description" content="{e(description)}">
@@ -92,7 +92,7 @@ def page(path, title, description, body, schema=None, og_type="website", extra="
 <div><b>UnderstandAIwithMe</b><p>{e(CFG['tagline'])} Practical fixes for the admin that eats your week.</p>
 <p><a href="{CFG['youtube']}" rel="noopener">YouTube</a> &middot; <a href="{CFG['tiktok']}" rel="noopener">TikTok</a></p></div>
 <div><b>Fix a problem</b>{foot_problems}<a href="/">All problems</a></div>
-<div><b>Site</b><a href="/tools/admin-time-calculator/">Admin time calculator</a><a href="/tools/ai-readiness-quiz/">AI readiness quiz</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/disclosure/">Disclosure</a><a href="/privacy/">Privacy</a></div>
+<div><b>Site</b><a href="/tools/admin-time-calculator/">Admin time calculator</a><a href="/tools/ai-readiness-quiz/">AI readiness quiz</a><a href="/guides/">Guides</a><a href="/recommended-tools/">Recommended tools</a><a href="/about/">About</a><a href="/disclosure/">Disclosure</a><a href="/privacy/">Privacy</a></div>
 </div>
 <p class="small">Some links on this site are affiliate or referral links: we may earn a commission at no cost to you. We are not financial advisers. &copy; {date.today().year} UnderstandAIwithMe</p>
 </div></footer>
@@ -145,7 +145,8 @@ def offer_block(t):
         return (
             f'<div class="offer"><p>Our pick: <b>{e(t["offer_name"])}</b>.</p>'
             f'<a class="btn" href="{e(t["offer_url"])}" rel="sponsored noopener">{e(t["cta"])}</a>'
-            '<p class="small">Affiliate link: we may earn a commission at no cost to you.</p></div>'
+            + (f'<p class="small">Available to {e(t["offer_region"])}.</p>' if t.get("offer_region") else "")
+            + '<p class="small">Affiliate link: we may earn a commission at no cost to you.</p></div>'
         )
     if kind == "enquiry":
         return enquiry_form()
@@ -179,12 +180,13 @@ def enquiry_form():
 <label>Team size<select name="team_size"{disabled}><option>1-10</option><option>11-50</option><option>51-200</option><option>200+</option></select></label>
 <label>The task you want automated<textarea name="task" rows="4" required{disabled}></textarea></label>
 <label>Hours it takes per week (rough)<input name="hours"{disabled}></label>
-<label>Budget, if known<select name="budget"{disabled}><option>Not sure yet</option><option>Under £5k</option><option>£5k-£15k</option><option>£15k-£50k</option><option>£50k+</option></select></label>
+<label>Budget, if known<select name="budget"{disabled}><option>Not sure yet</option><option>Under $5k</option><option>$5k-$15k</option><option>$15k-$50k</option><option>$50k+</option></select></label>
 <label>When do you need it?<select name="timing"{disabled}><option>This month</option><option>Next 3 months</option><option>Just exploring</option></select></label>
 <button class="btn" type="submit"{disabled}>Send my enquiry</button>
 <p class="small">We only use your details to respond to this enquiry. We may earn a referral fee from the partner. See <a href="/privacy/">Privacy</a>.</p>
 {note}
-</form>"""
+</form>
+<div class="offer" style="border-top-color:var(--teal)"><p><b>Prefer to talk to the build team directly?</b> Digital One Agency builds custom AI automations, apps and websites for businesses worldwide.</p><a class="btn ghost" href="{e(CFG.get("digital_one_url",""))}" rel="sponsored noopener">Contact Digital One</a><p class="small">Referral link: we may earn a fee if you become a client, at no cost to you.</p></div>"""
 
 
 def build_tile_pages():
@@ -231,7 +233,7 @@ def build_home():
     body = f"""<section class="hero home"><div class="wrap">
 <a class="pill" href="/tools/admin-time-calculator/"><span class="dot"></span>New: free admin time calculator &rarr;</a>
 <h1>What&rsquo;s eating your <em>time</em> this week?</h1>
-<p class="lead">Pick your biggest admin headache. You&rsquo;ll get a short, practical fix: an AI workflow, the right tool, or the right person. Built for UK small businesses.</p>
+<p class="lead">Pick your biggest admin headache. You&rsquo;ll get a short, practical fix: an AI workflow, the right tool, or the right person. Built for small businesses and solo founders.</p>
 <div class="actions"><a class="btn" href="/tools/admin-time-calculator/">Calculate my admin hours</a><a class="btn ghost" href="/tools/ai-readiness-quiz/">Take the 2-minute AI quiz</a></div>
 <div class="grid">{grid}</div>
 </div></section>
@@ -267,7 +269,7 @@ def build_home():
         {"@context": "https://schema.org", "@type": "WebSite", "name": CFG["site_name"], "url": URL + "/"},
         ORG,
     ]
-    return page("/", "UnderstandAIwithMe | Practical AI and tools to cut admin", "Pick your biggest admin problem and get a practical fix: an AI workflow, the right software, or the right person. Free admin time calculator and AI readiness quiz for UK small businesses.", body, schema)
+    return page("/", "UnderstandAIwithMe | Practical AI and tools to cut admin", "Pick your biggest admin problem and get a practical fix: an AI workflow, the right software, or the right person. Free admin time calculator and AI readiness quiz for small businesses.", body, schema)
 
 
 def md_to_html(md):
@@ -369,7 +371,7 @@ def build_guides():
         f'<li><a class="g" href="/guides/{s}/"><b>{e(mt["title"])}</b><span>{e(mt.get("description",""))} &middot; {e(d)}</span></a></li>'
         for d, s, mt, _ in GUIDES
     ) or "<li>First guides are on the way.</li>"
-    paths.append(page("/guides/", "Guides: practical AI and admin fixes | UnderstandAIwithMe", "Practical, plain-English guides to using AI and better tools to cut admin in a UK small business.", f'<section class="hero narrow"><div class="wrap"><p class="eyebrow">Guides</p><h1>Plain-English guides to cutting admin</h1><p class="lead">Step-by-step, no jargon. Each guide ends with the one fix we&rsquo;d try first.</p></div></section><section class="wrap narrow"><ul class="guides">{items}</ul></section>', crumbs(("Guides", "/guides/"))))
+    paths.append(page("/guides/", "Guides: practical AI and admin fixes | UnderstandAIwithMe", "Practical, plain-English guides to using AI and better tools to cut admin in a small business.", f'<section class="hero narrow"><div class="wrap"><p class="eyebrow">Guides</p><h1>Plain-English guides to cutting admin</h1><p class="lead">Step-by-step, no jargon. Each guide ends with the one fix we&rsquo;d try first.</p></div></section><section class="wrap narrow"><ul class="guides">{items}</ul></section>', crumbs(("Guides", "/guides/"))))
     return paths
 
 
@@ -424,7 +426,8 @@ def build_tools():
 <section class="wrap narrow">
 <form id="calc" class="tool" novalidate>
 <div class="row"><label for="people">People doing admin<span>Including you</span></label><input id="people" name="people" type="number" inputmode="numeric" min="1" step="1" value="1"></div>
-<div class="row"><label for="rate">Cost of an hour (&pound;)<span>Your hourly rate, or wage plus overheads</span></label><input id="rate" name="rate" type="number" inputmode="decimal" min="0" step="1" value="25"></div>
+<div class="row"><label for="currency">Currency<span>Used for the cost figures</span></label><select id="currency" name="currency" class="cur"><option value="USD">$ USD</option><option value="GBP">&pound; GBP</option><option value="AUD">A$ AUD</option><option value="EUR">&euro; EUR</option><option value="CAD">C$ CAD</option></select></div>
+<div class="row"><label for="rate">Cost of an hour<span>Your hourly rate, or wage plus overheads</span></label><input id="rate" name="rate" type="number" inputmode="decimal" min="0" step="1" value="25"></div>
 <h3 style="margin:22px 0 4px">Hours per person, per week</h3>
 {rows}
 <button class="btn" type="submit" style="margin-top:18px">Show my results</button>
@@ -456,7 +459,7 @@ def build_tools():
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"},
     }
     paths = [page("/tools/admin-time-calculator/", "Admin Time Calculator: what does admin cost your business? | UnderstandAIwithMe",
-                  "Free calculator for UK small businesses: see how many hours and pounds admin costs you each year, and which task to fix first.",
+                  "Free calculator for small businesses: see how many hours and how much money admin costs you each year, and which task to fix first.",
                   calc_body, [app("Admin time calculator", "See how many hours and how much money admin costs your business each year.", "/tools/admin-time-calculator/"), crumbs(("Free tools", "/tools/"), ("Admin time calculator", "/tools/admin-time-calculator/"))],
                   extra='<script src="/tools.js?v=' + VERSION + '" defer></script>')]
 
@@ -502,11 +505,25 @@ def build_tools():
 
     index = """<section class="hero narrow"><div class="wrap"><p class="eyebrow">Free tools</p><h1>Free tools to find your time back</h1><p class="lead">Quick, private, no sign-up. Everything runs in your browser.</p></div></section>
 <section class="wrap narrow"><div class="tools">
-<a class="tool-card" href="/tools/admin-time-calculator/"><span class="kicker">Calculator</span><h3>Admin time calculator</h3><p>See how many hours and pounds admin costs you each year, and which task to fix first.</p><span class="go">Work it out &rarr;</span></a>
+<a class="tool-card" href="/tools/admin-time-calculator/"><span class="kicker">Calculator</span><h3>Admin time calculator</h3><p>See how many hours and how much money admin costs you each year, and which task to fix first.</p><span class="go">Work it out &rarr;</span></a>
 <a class="tool-card" href="/tools/ai-readiness-quiz/"><span class="kicker">Quiz</span><h3>Is your business ready for AI?</h3><p>A readiness score and the one next step that makes sense for you.</p><span class="go">Take the quiz &rarr;</span></a>
+<a class="tool-card" href="/recommended-tools/"><span class="kicker">Shortlist</span><h3>Recommended tools</h3><p>One tool or partner per job: AI, marketing, money and done-for-you builds.</p><span class="go">See the list &rarr;</span></a>
 </div></section>"""
-    paths.append(page("/tools/", "Free tools for small business admin | UnderstandAIwithMe", "Free, private tools for UK small businesses: an admin time calculator and an AI readiness quiz.", index, crumbs(("Free tools", "/tools/"))))
+    paths.append(page("/tools/", "Free tools for small business admin | UnderstandAIwithMe", "Free, private tools for small businesses: an admin time calculator and an AI readiness quiz.", index, crumbs(("Free tools", "/tools/"))))
     return paths
+
+
+def build_recommended():
+    cards = "".join(
+        f'<div class="tool-card"><span class="kicker">{e(r["cat"])}</span><h3>{e(r["name"])}</h3><p><b>{e(r["what"])}</b></p><p>{e(r["who"])}</p>'
+        f'<a class="btn" style="margin-top:8px;align-self:flex-start" href="{e(r["url"])}" rel="sponsored noopener">{e(r["cta"])}</a></div>'
+        for r in CFG.get("recommended", [])
+    )
+    body = f"""<section class="hero narrow"><div class="wrap"><p class="eyebrow">Recommended tools</p><h1>Tools worth paying for</h1>
+<p class="lead">A short list of tools and partners that fix common admin and marketing problems. One per job, no endless comparisons.</p></div></section>
+<section class="wrap"><div class="tools">{cards}</div>
+<p class="small" style="margin-top:24px">These are affiliate or referral links: we may earn a commission if you sign up, at no extra cost to you. See the <a href="/disclosure/">disclosure</a>. Not sure which you need? Try the <a href="/tools/admin-time-calculator/">admin time calculator</a> first.</p></section>"""
+    return [page("/recommended-tools/", "Recommended tools for small business admin and AI | UnderstandAIwithMe", "A short list of AI, marketing and admin tools for small businesses, with one recommendation per job.", body, crumbs(("Recommended tools", "/recommended-tools/")))]
 
 
 def build_about():
@@ -538,7 +555,7 @@ def main():
         if f.is_file():
             shutil.copy(f, OUT / f.name)
     load_guides()
-    paths = [build_home()] + build_tools() + build_tile_pages() + build_guides() + build_about() + build_legal()
+    paths = [build_home()] + build_tools() + build_tile_pages() + build_guides() + build_recommended() + build_about() + build_legal()
     page("/fix/build-ai-automation/thanks/", "Enquiry received | UnderstandAIwithMe", "Your enquiry has been received.", '<section class="wrap narrow hero"><h1>Thanks, your enquiry is in</h1><p class="lead">We will review it and send an anonymous summary to our AI automation partner. Expect a reply by email within two working days with whether it fits and a rough estimate.</p><p><a class="btn ghost" href="/guides/">Read the guides meanwhile</a></p></section>')
     page("/fix/build-ai-automation/error/", "Something went wrong | UnderstandAIwithMe", "The enquiry could not be sent.", '<section class="wrap narrow hero"><h1>Sorry, that did not go through</h1><p class="lead">Please go back and try again in a minute. If it keeps failing, <a href="'+CFG["email_signup_url"]+'">join the list</a> and reply to the first email with your task.</p></section>')
     page("/404.html", "Page not found | UnderstandAIwithMe", "Page not found.", '<section class="wrap narrow hero"><h1>Page not found</h1><p class="lead">That page has moved or never existed.</p><p><a class="btn" href="/">Back to the start</a></p></section>')

@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Admin Time Calculator: what does admin cost your business? | UnderstandAIwithMe</title>
-<meta name="description" content="Free calculator for UK small businesses: see how many hours and pounds admin costs you each year, and which task to fix first.">
+<meta name="description" content="Free calculator for small businesses: see how many hours and how much money admin costs you each year, and which task to fix first.">
 <link rel="canonical" href="https://understandaiwithme.com/tools/admin-time-calculator/">
 <meta name="theme-color" content="#0f766e">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -12,21 +12,21 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:site_name" content="UnderstandAIwithMe">
 <meta property="og:title" content="Admin Time Calculator: what does admin cost your business? | UnderstandAIwithMe">
-<meta property="og:description" content="Free calculator for UK small businesses: see how many hours and pounds admin costs you each year, and which task to fix first.">
+<meta property="og:description" content="Free calculator for small businesses: see how many hours and how much money admin costs you each year, and which task to fix first.">
 <meta property="og:url" content="https://understandaiwithme.com/tools/admin-time-calculator/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://understandaiwithme.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_GB">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Admin Time Calculator: what does admin cost your business? | UnderstandAIwithMe">
-<meta name="twitter:description" content="Free calculator for UK small businesses: see how many hours and pounds admin costs you each year, and which task to fix first.">
+<meta name="twitter:description" content="Free calculator for small businesses: see how many hours and how much money admin costs you each year, and which task to fix first.">
 <meta name="twitter:image" content="https://understandaiwithme.com/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
-<link rel="stylesheet" href="/style.css?v=20261030">
+<link rel="stylesheet" href="/style.css?v=20261031">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Admin time calculator", "description": "See how many hours and how much money admin costs your business each year.", "url": "https://understandaiwithme.com/tools/admin-time-calculator/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://understandaiwithme.com/"}, {"@type": "ListItem", "position": 2, "name": "Free tools", "item": "https://understandaiwithme.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Admin time calculator", "item": "https://understandaiwithme.com/tools/admin-time-calculator/"}]}</script>
 </head>
 <body>
@@ -42,7 +42,8 @@
 <section class="wrap narrow">
 <form id="calc" class="tool" novalidate>
 <div class="row"><label for="people">People doing admin<span>Including you</span></label><input id="people" name="people" type="number" inputmode="numeric" min="1" step="1" value="1"></div>
-<div class="row"><label for="rate">Cost of an hour (&pound;)<span>Your hourly rate, or wage plus overheads</span></label><input id="rate" name="rate" type="number" inputmode="decimal" min="0" step="1" value="25"></div>
+<div class="row"><label for="currency">Currency<span>Used for the cost figures</span></label><select id="currency" name="currency" class="cur"><option value="USD">$ USD</option><option value="GBP">&pound; GBP</option><option value="AUD">A$ AUD</option><option value="EUR">&euro; EUR</option><option value="CAD">C$ CAD</option></select></div>
+<div class="row"><label for="rate">Cost of an hour<span>Your hourly rate, or wage plus overheads</span></label><input id="rate" name="rate" type="number" inputmode="decimal" min="0" step="1" value="25"></div>
 <h3 style="margin:22px 0 4px">Hours per person, per week</h3>
 <div class="row"><label for="t-cash-flow">Invoicing and chasing payments<span>Raising invoices, sending reminders, matching payments</span></label><input id="t-cash-flow" type="number" inputmode="decimal" min="0" step="0.5" placeholder="0" data-task="cash-flow" data-label="Invoicing and chasing payments" data-short="Cash flow"></div><div class="row"><label for="t-payroll-takes-forever">Payroll, rotas and HR paperwork<span>Pay runs, holiday requests, contracts, new starters</span></label><input id="t-payroll-takes-forever" type="number" inputmode="decimal" min="0" step="0.5" placeholder="0" data-task="payroll-takes-forever" data-label="Payroll, rotas and HR paperwork" data-short="Payroll and HR"></div><div class="row"><label for="t-receipts-and-expenses">Receipts and expenses<span>Collecting receipts, expense claims, reconciling cards</span></label><input id="t-receipts-and-expenses" type="number" inputmode="decimal" min="0" step="0.5" placeholder="0" data-task="receipts-and-expenses" data-label="Receipts and expenses" data-short="Expenses"></div><div class="row"><label for="t-need-an-accountant">Bookkeeping and tax prep<span>Categorising transactions, VAT, getting ready for year-end</span></label><input id="t-need-an-accountant" type="number" inputmode="decimal" min="0" step="0.5" placeholder="0" data-task="need-an-accountant" data-label="Bookkeeping and tax prep" data-short="Accountant"></div><div class="row"><label for="t-build-ai-automation">Repetitive emails, quotes and reports<span>Same-shape emails, quotes, weekly reports, data entry</span></label><input id="t-build-ai-automation" type="number" inputmode="decimal" min="0" step="0.5" placeholder="0" data-task="build-ai-automation" data-label="Repetitive emails, quotes and reports" data-short="Build it for me"></div><div class="row"><label for="t-too-many-tools">Re-keying data between tools<span>Copying the same info between apps and spreadsheets</span></label><input id="t-too-many-tools" type="number" inputmode="decimal" min="0" step="0.5" placeholder="0" data-task="too-many-tools" data-label="Re-keying data between tools" data-short="Too many tools"></div>
 <button class="btn" type="submit" style="margin-top:18px">Show my results</button>
@@ -73,10 +74,10 @@
 <div><b>UnderstandAIwithMe</b><p>Practical AI for real work. No coding, no hype. Practical fixes for the admin that eats your week.</p>
 <p><a href="https://www.youtube.com/@UnderstandAIwithMe" rel="noopener">YouTube</a> &middot; <a href="https://www.tiktok.com/@understandaiwithme" rel="noopener">TikTok</a></p></div>
 <div><b>Fix a problem</b><a href="/fix/build-ai-automation/">Build it for me</a><a href="/fix/payroll-takes-forever/">Payroll and HR</a><a href="/fix/cash-flow/">Cash flow</a><a href="/fix/need-an-accountant/">Accountant</a><a href="/fix/receipts-and-expenses/">Expenses</a><a href="/">All problems</a></div>
-<div><b>Site</b><a href="/tools/admin-time-calculator/">Admin time calculator</a><a href="/tools/ai-readiness-quiz/">AI readiness quiz</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/disclosure/">Disclosure</a><a href="/privacy/">Privacy</a></div>
+<div><b>Site</b><a href="/tools/admin-time-calculator/">Admin time calculator</a><a href="/tools/ai-readiness-quiz/">AI readiness quiz</a><a href="/guides/">Guides</a><a href="/recommended-tools/">Recommended tools</a><a href="/about/">About</a><a href="/disclosure/">Disclosure</a><a href="/privacy/">Privacy</a></div>
 </div>
 <p class="small">Some links on this site are affiliate or referral links: we may earn a commission at no cost to you. We are not financial advisers. &copy; 2026 UnderstandAIwithMe</p>
 </div></footer>
-<script src="/tools.js?v=20261030" defer></script>
+<script src="/tools.js?v=20261031" defer></script>
 </body>
 </html>

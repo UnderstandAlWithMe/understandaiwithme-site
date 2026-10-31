@@ -4,13 +4,13 @@ description: A simple system for capturing receipts and expenses as they happen,
 date: 2026-10-26
 tile: receipts-and-expenses
 ---
-If month end means emptying wallets, scrolling through emails for PDF receipts and asking the team "what was this £48 for?", the problem is not the receipts. It is the timing. Receipts get lost because they are dealt with weeks after the purchase.
+If month end means emptying wallets, scrolling through emails for PDF receipts and asking the team "what was this 48 for?", the problem is not the receipts. It is the timing. Receipts get lost because they are dealt with weeks after the purchase.
 
 The fix is to capture each receipt at the moment money is spent.
 
 ## Why it matters
 
-Your records need to show what you spent and why, and HMRC expects businesses to keep records for several years. Missing receipts mean either claiming less than you could, or spending hours reconstructing the paper trail. GOV.UK sets out the record-keeping rules for sole traders and limited companies.
+Your records need to show what you spent and why, and tax authorities (HMRC in the UK, the IRS in the US, the ATO in Australia) expect businesses to keep records for several years. Missing receipts mean either claiming less than you could, or spending hours reconstructing the paper trail. Check your tax authority's website for the exact record-keeping rules where you are.
 
 ## Step 1: One rule for the whole team
 
@@ -45,7 +45,7 @@ Once a week, look for transactions without a receipt and chase them while people
 
 ## Where AI helps
 
-Receipt-capture tools increasingly use AI to read the supplier, date, amount and VAT from a photo. You can also ask an AI assistant to help write a short expenses policy for your team. Ask it for "a one-page expenses policy for a 10-person UK business, covering limits, receipts and approvals", then edit it to fit.
+Receipt-capture tools increasingly use AI to read the supplier, date, amount and sales tax (VAT or GST) from a photo. You can also ask an AI assistant to help write a short expenses policy for your team. Ask it for "a one-page expenses policy for a 10-person business, covering limits, receipts and approvals", then edit it to fit.
 
 ## The short version
 
