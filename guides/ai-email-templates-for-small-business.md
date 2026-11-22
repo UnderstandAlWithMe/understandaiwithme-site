@@ -40,6 +40,8 @@ Now each email starts with one line from you:
 
 You get a draft in your voice. Edit, then send.
 
+If quotes are the emails you most often forget to chase, our [quote follow-up system for tradespeople](/guides/quote-follow-up-system-for-tradespeople/) sends them for you on a timer.
+
 ## Step 5: Keep it safe
 
 AI assistants are useful, but treat them like any outside service:

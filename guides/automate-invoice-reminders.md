@@ -57,6 +57,8 @@ Always read the draft before sending, and do not paste in bank details or anythi
 
 Once a month, check two things: how many days on average it takes customers to pay, and which customers are always late. Consider shorter terms, deposits or upfront payment for repeat late payers.
 
+Before the invoice, there is the quote. Our [quote follow-up system](/guides/quote-follow-up-system-for-tradespeople/) uses the same idea to win more of the jobs you have already priced.
+
 ## A note on your rights
 
 Many countries give businesses extra rights when commercial invoices are paid late. In the UK, you can claim statutory interest and compensation under late payment legislation (GOV.UK explains how). In the US and Australia the rules depend on your state and your contract terms, so put clear late-payment terms on your invoices and check your local government business site. You do not have to use these rights, but it helps to know they exist.

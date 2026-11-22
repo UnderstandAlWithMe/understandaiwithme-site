@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Free Quote Follow-Up System for Tradespeople (AI Writes the Emails) | UnderstandAIwithMe</title>
+<meta name="description" content="Build a free quote follow-up system: a quote request page, three polite AI-written emails and the one step that stops it chasing customers who said yes.">
+<link rel="canonical" href="https://understandaiwithme.com/guides/quote-follow-up-system-for-tradespeople/">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="UnderstandAIwithMe">
+<meta property="og:title" content="A Free Quote Follow-Up System for Tradespeople (AI Writes the Emails) | UnderstandAIwithMe">
+<meta property="og:description" content="Build a free quote follow-up system: a quote request page, three polite AI-written emails and the one step that stops it chasing customers who said yes.">
+<meta property="og:url" content="https://understandaiwithme.com/guides/quote-follow-up-system-for-tradespeople/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://understandaiwithme.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Free Quote Follow-Up System for Tradespeople (AI Writes the Emails) | UnderstandAIwithMe">
+<meta name="twitter:description" content="Build a free quote follow-up system: a quote request page, three polite AI-written emails and the one step that stops it chasing customers who said yes.">
+<meta name="twitter:image" content="https://understandaiwithme.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/style.css?v=20261122">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A Free Quote Follow-Up System for Tradespeople (AI Writes the Emails)", "description": "Build a free quote follow-up system: a quote request page, three polite AI-written emails and the one step that stops it chasing customers who said yes.", "datePublished": "2026-11-22", "dateModified": "2026-11-22", "image": "https://understandaiwithme.com/og.png", "mainEntityOfPage": "https://understandaiwithme.com/guides/quote-follow-up-system-for-tradespeople/", "author": {"@type": "Person", "name": "Constantin", "url": "https://understandaiwithme.com/about/"}, "publisher": {"@type": "Organization", "name": "UnderstandAIwithMe", "logo": {"@type": "ImageObject", "url": "https://understandaiwithme.com/apple-touch-icon.png"}}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://understandaiwithme.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://understandaiwithme.com/guides/"}, {"@type": "ListItem", "position": 3, "name": "A Free Quote Follow-Up System for Tradespeople (AI Writes the Emails)", "item": "https://understandaiwithme.com/guides/quote-follow-up-system-for-tradespeople/"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/"><img src="/favicon.svg" width="30" height="30" alt="" style="border-radius:8px"><span>Understand<b>AI</b>withMe</span></a>
+<nav aria-label="Main"><a href="/tools/">Free tools</a><a href="/guides/">Guides</a><a href="/about/">About</a><a class="nav-cta" href="/fix/build-ai-automation/">Get it built</a></nav>
+</div></header>
+<main><article class="wrap narrow guide" style="padding-top:44px">
+<p class="eyebrow"><a href="/guides/">Guides</a></p>
+<h1>A Free Quote Follow-Up System for Tradespeople (AI Writes the Emails)</h1>
+<p class="meta">By <a href="/about/">Constantin</a> &middot; 2026-11-22 &middot; 6 min read</p>
+
+<p>You send a quote, the customer sounds keen, and then nothing. You mean to chase it, but you are on a job all day and by the evening it has slipped your mind again. A <b>quote follow-up system</b> fixes that. It sends a short thank-you straight away, then two polite check-ins over the next week, written in your own voice, while you get on with the work.</p>
+<p>A quote that goes quiet is often not a no. It is a busy customer who needed one friendly nudge. This guide shows plumbers, electricians, cleaners, decorators and any other trade how to set the nudges up once, for free, without coding.</p>
+<h2>What you will build</h2>
+<ul>
+<li>A short <b>quote request page</b> where customers leave their name, email and what they need doing.</li>
+<li><b>Three short emails</b>, drafted by AI and edited by you: a thank-you on day 0, a check-in on day 3 and a last, no-pressure note on day 7.</li>
+<li><b>One automation rule</b> that starts the emails when someone fills in the form. An automation rule is simply an &quot;if this happens, do that&quot; instruction.</li>
+<li>A <b>weekly check</b> so a person, not a machine, handles anyone who goes quiet.</li>
+</ul>
+<p>You need an email tool that can send a sequence of emails on a timer. We use Systeme.io in our video because its free plan includes one email campaign (a set of emails sent in order) and one automation rule, which is all this needs. Any email marketing tool with automations works the same way. You can find it on our <a href="/recommended-tools/">recommended tools</a> page.</p>
+<h2>How to build a quote follow-up system in five steps</h2>
+<h3>Step 1: Make a quote request page</h3>
+<p>Create a simple form page with three boxes: name, email, and &quot;What do you need doing?&quot; Keep the headline plain, such as &quot;Get a quote for your plumbing job&quot;. In Systeme.io this is a funnel with an opt-in page; in other tools it may be called a form or landing page.</p>
+<p>Put the page link where customers already find you: your Google Business Profile, website, email signature and the text you send when someone rings for a price.</p>
+<p>If you already send quotes from job software, you can skip the page and add customers to the sequence by hand when you send each quote.</p>
+<h3>Step 2: Let AI write the three emails</h3>
+<p>Open ChatGPT, Claude or another AI assistant. If you have already written a short &quot;how we write&quot; note (see our guide to <a href="/guides/ai-email-templates-for-small-business/">AI emails in your own voice</a>), paste it in first. Then paste this prompt and change the details to fit your trade:</p>
+<p>&quot;I&#x27;m a local plumber. My customers are homeowners. I sound friendly, direct and never pushy. Write three short emails for someone who has asked for a quote. Email one, sent straight away: thank them and say when they&#x27;ll hear from me. Email two, three days later: check the quote arrived and offer to answer questions. Email three, seven days later: a last, no-pressure note. Each under 100 words, ending with my phone number.&quot;</p>
+<p>Read each draft out loud. If it sounds like something you would never say to a customer&#x27;s face, ask the AI to make it &quot;plainer&quot; or &quot;more like a text message&quot;. Check every fact yourself: AI can invent prices, dates or promises.</p>
+<h3>Step 3: Put the emails in order and switch them on</h3>
+<p>In your email tool, create a campaign called &quot;Quote follow-up&quot; and add the three emails with delays of 0, 3 and 7 days. Then add one rule: when someone fills in the quote form, add them to the &quot;Quote follow-up&quot; campaign.</p>
+<p>Before you share the page, fill in the form yourself with your own email address and check that all three emails arrive, read well on a phone and show the right phone number.</p>
+<h3>Step 4: Stop the chase the moment they reply</h3>
+<p>This is the step most people miss. When a customer books, replies with a question or says no thanks, take them out of the campaign straight away. In Systeme.io, open Contacts, find the person and unsubscribe them from the campaign. On a free plan this is usually a manual step, and that is fine.</p>
+<p>As a safety net, add one line to emails two and three: &quot;If you&#x27;ve already gone ahead, please ignore this, and thank you.&quot; Without this step, the system keeps chasing someone who already said yes, which is what makes automatic emails feel robotic.</p>
+<h3>Step 5: A five-minute check every Friday</h3>
+<p>Once a week, look at your contacts. Who asked for a quote, who replied, and who went quiet after all three emails? Those last few are worth one personal phone call. The system does the remembering; you do the human part.</p>
+<h2>Write follow-ups that do not feel pushy</h2>
+<ul>
+<li><b>Be specific.</b> Mention the job: &quot;the boiler service quote I sent on Tuesday&quot; beats &quot;my recent quote&quot;.</li>
+<li><b>Make replying easy.</b> One question, one phone number, no long sign-off.</li>
+<li><b>Never invent urgency.</b> Do not claim a price expires or a slot is nearly gone unless it is true.</li>
+<li><b>Keep it about their job.</b> These emails are about the quote they asked for. Adding people to a marketing newsletter is a separate decision and usually needs their permission. Rules on marketing emails differ by country (the ICO in the UK, the FTC in the US and ACMA in Australia publish guidance), so check your local rules.</li>
+</ul>
+<p>If you want to see how much time chasing quotes and other admin costs you each week, try the free <a href="https://understandaiwithme.com/tools/admin-time-calculator/">admin time calculator</a>. Our <a href="/guides/use-ai-to-find-where-your-admin-time-goes/">one-week admin time audit</a> goes further.</p>
+<h2>Once the quote turns into a job</h2>
+<p>The same idea works after the work is done. Our guide to <a href="/guides/automate-invoice-reminders/">automating invoice reminders</a> uses a similar schedule to get you paid without awkward phone calls. If you would rather have a follow-up system connected to your quoting software or CRM built for you, see <a href="/fix/build-ai-automation/">get an AI automation built</a>.</p>
+<h2>FAQ</h2>
+<h3>How soon should you follow up on a quote?</h3>
+<p>A thank-you straight away, a check-in after about three days and a final note after about a week suits most small jobs. For large or expensive jobs, customers may need longer to compare quotes, so stretch the gaps rather than adding more emails.</p>
+<h3>How many times should you follow up on a quote?</h3>
+<p>Two or three automatic messages is usually enough. After that, a short personal phone call works better than another email, and if there is still no answer, let it go politely.</p>
+<h3>What should you say in a quote follow-up email?</h3>
+<p>Name the job, check the quote arrived, offer to answer questions and give one easy way to reply. Keep it under 100 words, friendly and free of pressure.</p>
+<h2>The short version</h2>
+<ul>
+<li>A quote that goes quiet is often a busy customer, not a no.</li>
+<li>One quote page, three short AI-drafted emails (day 0, 3 and 7) and one automation rule.</li>
+<li>Read every email out loud and check every fact before switching it on.</li>
+<li>Take customers out of the sequence the moment they reply.</li>
+<li>A five-minute Friday check, then a personal call to anyone who went quiet.</li>
+</ul>
+<div class="card cta"><p class="eyebrow" style="color:#7dd3c8">Your next step</p><h3>Have someone build an AI automation for my business?</h3><p>If the same admin task eats hours every week, a small custom AI workflow can usually take most of it away. You describe the problem; a specialist team scopes and builds it.</p><a class="btn" href="/fix/build-ai-automation/">See the fastest fix</a></div>
+<p class="small">Want numbers for your own business? Try the <a href="/tools/admin-time-calculator/">admin time calculator</a> or the <a href="/tools/ai-readiness-quiz/">AI readiness quiz</a>.</p>
+<h2>More guides</h2>
+<ul class="guides"><li><a class="g" href="/guides/use-ai-to-categorize-business-expenses/"><b>Use AI to Sort a Year of Business Expenses in an Afternoon</b><span>Export your bank transactions, let ChatGPT or Claude suggest expense categories, then check the result before it goes near your books or tax return.</span></a></li><li><a class="g" href="/guides/stop-chasing-timesheets-before-payroll/"><b>Stop Chasing Timesheets Before Payroll: A Simple System for Small Teams</b><span>How to collect accurate hours from staff on time every pay period, with one deadline, one method and a quick check before you run payroll.</span></a></li><li><a class="g" href="/guides/13-week-cash-flow-forecast/"><b>How to Build a 13-Week Cash Flow Forecast (With AI to Help)</b><span>A simple week-by-week spreadsheet that shows when money will run short, plus prompts to get ChatGPT or Claude to build and update it for you.</span></a></li></ul>
+</article></main>
+<footer><div class="wrap">
+<div class="cols">
+<div><b>UnderstandAIwithMe</b><p>Practical AI for real work. No coding, no hype. Practical fixes for the admin that eats your week.</p>
+<p><a href="https://www.youtube.com/@UnderstandAIwithMe" rel="noopener">YouTube</a> &middot; <a href="https://www.tiktok.com/@understandaiwithme" rel="noopener">TikTok</a></p></div>
+<div><b>Fix a problem</b><a href="/fix/build-ai-automation/">Build it for me</a><a href="/fix/payroll-takes-forever/">Payroll and HR</a><a href="/fix/cash-flow/">Cash flow</a><a href="/fix/need-an-accountant/">Accountant</a><a href="/fix/receipts-and-expenses/">Expenses</a><a href="/">All problems</a></div>
+<div><b>Site</b><a href="/tools/admin-time-calculator/">Admin time calculator</a><a href="/tools/ai-readiness-quiz/">AI readiness quiz</a><a href="/guides/">Guides</a><a href="/recommended-tools/">Recommended tools</a><a href="/about/">About</a><a href="/disclosure/">Disclosure</a><a href="/privacy/">Privacy</a></div>
+</div>
+<p class="small">Some links on this site are affiliate or referral links: we may earn a commission at no cost to you. We are not financial advisers. &copy; 2026 UnderstandAIwithMe</p>
+</div></footer>
+
+</body>
+</html>
