@@ -28,6 +28,7 @@ Every partner link on the site points to `/go/<slug>` instead of the raw affilia
 - To add an offer: add `"slug": "https://the-tracking-link"` to `go_links`, then give the tile or recommended item `"go": "slug"`. Run `python3 build.py` and push.
 - Counting needs a KV namespace bound to the Pages project as `CLICKS` (one-time setup in Cloudflare). Without it, links still redirect but aren't counted.
 - Counts are stored as `date|slug|page` → number. No IP addresses or personal data.
+- impact.com links (`*.sjv.io`) also get `subId1=<source page tag>`, so impact.com commission reports show which page earned.
 - `/go/` is blocked in robots.txt and the links carry `rel="sponsored nofollow"`.
 
 ## Rules for content

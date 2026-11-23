@@ -8,6 +8,7 @@
 // still redirect, they just aren't counted.
 //
 // Keys look like: 2026-11-24|systeme|/guides/quote-follow-up-system-for-tradespeople/
+// impact.com (sjv.io) links also get subId1=<source page tag> so commission reports show the page.
 
 import LINKS from "../../lib/go-links.js";
 
@@ -25,21 +26,38 @@ export async function onRequest({ params, request, env, waitUntil }) {
 
   return new Response(null, {
     status: 302,
-    headers: { Location: target, "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" },
+    headers: { Location: withSource(target, sourceOf(request)), "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" },
   });
 }
 
-async function count(kv, slug, request) {
-  let from = "direct";
+// Which page of this site the click came from: a path, or "direct" / "external" / "unknown".
+function sourceOf(request) {
   const ref = request.headers.get("Referer");
-  if (ref) {
-    try {
-      const u = new URL(ref);
-      from = u.hostname.endsWith("understandaiwithme.com") ? u.pathname.slice(0, 200) : "external";
-    } catch {
-      from = "unknown";
-    }
+  if (!ref) return "direct";
+  try {
+    const u = new URL(ref);
+    return /(^|\.)understandaiwithme\.com$|\.pages\.dev$/.test(u.hostname) ? u.pathname.slice(0, 200) : "external";
+  } catch {
+    return "unknown";
   }
+}
+
+// impact.com links (*.sjv.io) accept a subId1 that shows up in commission reports, so we pass
+// the source page as a short tag (e.g. "guides-salon-booking-system"). No personal data.
+function withSource(target, from) {
+  try {
+    const u = new URL(target);
+    if (!u.hostname.endsWith(".sjv.io")) return target;
+    const tag = from.replace(/^\/|\/$/g, "").replace(/[^a-z0-9]+/gi, "-").toLowerCase().slice(0, 50) || "home";
+    u.searchParams.set("subId1", tag);
+    return u.toString();
+  } catch {
+    return target;
+  }
+}
+
+async function count(kv, slug, request) {
+  const from = sourceOf(request);
   const key = `${new Date().toISOString().slice(0, 10)}|${slug}|${from}`;
   const n = parseInt((await kv.get(key)) || "0", 10) || 0;
   await kv.put(key, String(n + 1));
