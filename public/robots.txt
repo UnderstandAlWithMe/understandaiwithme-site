@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /go/
 Sitemap: https://understandaiwithme.com/sitemap.xml
