@@ -157,9 +157,9 @@ def offer_block(t):
         )
     # pending: partner not yet approved -> capture the visitor instead
     return (
-        f'<div class="offer"><p>We are finalising our recommended provider for this. '
-        f'Join the free list and we will send you the one we trust, plus a short checklist.</p>'
-        f'<a class="btn" href="{signup}">Send me the recommendation</a>'
+        f'<div class="offer"><p>We have not picked a provider to recommend for this yet, so there is no pick here. '
+        f'In the meantime, the free Admin Fix email series shows where your admin time goes and what to fix first.</p>'
+        f'<a class="btn" href="{signup}">Get the free series</a>'
         '<p class="small">Free. Unsubscribe any time.</p></div>'
     )
 
