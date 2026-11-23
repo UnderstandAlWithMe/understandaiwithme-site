@@ -62,7 +62,7 @@ If you want to see how much time chasing quotes and other admin costs you each w
 
 ## Once the quote turns into a job
 
-The same idea works after the work is done. Our guide to [automating invoice reminders](/guides/automate-invoice-reminders/) uses a similar schedule to get you paid without awkward phone calls. If you would rather have a follow-up system connected to your quoting software or CRM built for you, see [get an AI automation built](/fix/build-ai-automation/).
+The same idea works after the work is done. Our guide to [automating invoice reminders](/guides/automate-invoice-reminders/) uses a similar schedule to get you paid without awkward phone calls. If you book clients by the hour rather than quoting, our [salon booking system](/guides/salon-booking-system/) guide sets up self-booking with automatic reminders. If you would rather have a follow-up system connected to your quoting software or CRM built for you, see [get an AI automation built](/fix/build-ai-automation/).
 
 ## FAQ
 

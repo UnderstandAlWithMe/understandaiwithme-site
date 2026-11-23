@@ -73,6 +73,7 @@ Also check your provider's guidance on chargebacks (when a customer disputes a p
 - **Choosing on headline rate alone.** Monthly fees and fixed per-payment fees change the picture.
 - **Forgetting about after-the-job payments.** A reader does not help if most customers pay later. Links do.
 - **Taking card details over the phone and writing them down.** Use a payment link instead.
+- **Surprising clients with a deposit.** If you take deposits for appointments, say so on your booking page before people book. Our [salon booking system](/guides/salon-booking-system/) guide shows where that wording goes.
 
 ## The short version
 
