@@ -311,8 +311,20 @@ def inline(s):
     s = e(s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
     s = re.sub(r"\*(.+?)\*", r"<em>\1</em>", s)
-    s = re.sub(r"\[(.+?)\]\((.+?)\)", lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', s)
+    s = re.sub(r"\[(.+?)\]\((.+?)\)", md_link, s)
     return s
+
+
+def md_link(m):
+    """Markdown link. /go/<slug> partner links must exist in go_links and carry rel="sponsored"."""
+    text, href = m.group(1), m.group(2)
+    if href.startswith("/go/"):
+        slug = href[4:].strip("/")
+        assert slug in CFG.get("go_links", {}), f"guide links to unknown /go/ slug: {href}"
+        return f'<a href="/go/{slug}" rel="sponsored nofollow noopener">{text}</a>'
+    if href.startswith(("http://", "https://")) and not href.startswith(URL):
+        return f'<a href="{href}" rel="noopener">{text}</a>'
+    return f'<a href="{href}">{text}</a>'
 
 
 GUIDES = []  # (date, slug, meta, body_md), newest first

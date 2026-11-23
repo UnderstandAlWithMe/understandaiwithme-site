@@ -30,6 +30,7 @@ Every partner link on the site points to `/go/<slug>` instead of the raw affilia
 - Counts are stored as `date|slug|page` → number. No IP addresses or personal data.
 - impact.com links (`*.sjv.io`) also get `subId1=<source page tag>`, so impact.com commission reports show which page earned.
 - `/go/` is blocked in robots.txt and the links carry `rel="sponsored nofollow"`.
+- In a guide or money page, write partner links as `[text](/go/slug)`. `build.py` adds `rel="sponsored nofollow noopener"` and stops with an error if the slug isn't in `go_links`. `/go/` links are redirects, not built pages, so a link check should treat any slug listed in `go_links` as valid.
 
 ## Rules for content
 
