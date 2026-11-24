@@ -14,6 +14,15 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "public"
 CFG = json.loads((ROOT / "site.json").read_text(encoding="utf-8"))
 URL = CFG["site_url"].rstrip("/")
+
+
+def out_link(item, key="url"):
+    """Outbound offer link: the tracked /go/<slug> path when the item has one, else its raw URL."""
+    slug = item.get("go")
+    if slug:
+        assert slug in CFG.get("go_links", {}), f"unknown go slug {slug}"
+        return f"/go/{slug}"
+    return item.get(key, "")
 TODAY = date.today().isoformat()
 VERSION = TODAY.replace("-", "")
 e = html.escape
@@ -144,7 +153,7 @@ def offer_block(t):
     if kind == "live":
         return (
             f'<div class="offer"><p>Our pick: <b>{e(t["offer_name"])}</b>.</p>'
-            f'<a class="btn" href="{e(t["offer_url"])}" rel="sponsored noopener">{e(t["cta"])}</a>'
+            f'<a class="btn" href="{e(out_link(t, "offer_url"))}" rel="sponsored nofollow noopener">{e(t["cta"])}</a>'
             + (f'<p class="small">Available to {e(t["offer_region"])}.</p>' if t.get("offer_region") else "")
             + '<p class="small">Affiliate link: we may earn a commission at no cost to you.</p></div>'
         )
@@ -157,9 +166,9 @@ def offer_block(t):
         )
     # pending: partner not yet approved -> capture the visitor instead
     return (
-        f'<div class="offer"><p>We are finalising our recommended provider for this. '
-        f'Join the free list and we will send you the one we trust, plus a short checklist.</p>'
-        f'<a class="btn" href="{signup}">Send me the recommendation</a>'
+        f'<div class="offer"><p>We have not picked a provider to recommend for this yet, so there is no pick here. '
+        f'In the meantime, the free Admin Fix email series shows where your admin time goes and what to fix first.</p>'
+        f'<a class="btn" href="{signup}">Get the free series</a>'
         '<p class="small">Free. Unsubscribe any time.</p></div>'
     )
 
@@ -186,7 +195,7 @@ def enquiry_form():
 <p class="small">We only use your details to respond to this enquiry. We may earn a referral fee from the partner. See <a href="/privacy/">Privacy</a>.</p>
 {note}
 </form>
-<div class="offer" style="border-top-color:var(--teal)"><p><b>Prefer to talk to the build team directly?</b> Digital One Agency builds custom AI automations, apps and websites for businesses worldwide.</p><a class="btn ghost" href="{e(CFG.get("digital_one_url",""))}" rel="sponsored noopener">Contact Digital One</a><p class="small">Referral link: we may earn a fee if you become a client, at no cost to you.</p></div>"""
+<div class="offer" style="border-top-color:var(--teal)"><p><b>Prefer to talk to the build team directly?</b> Digital One Agency builds custom AI automations, apps and websites for businesses worldwide.</p><a class="btn ghost" href="/go/digital-one" rel="sponsored nofollow noopener">Contact Digital One</a><p class="small">Referral link: we may earn a fee if you become a client, at no cost to you.</p></div>"""
 
 
 def build_tile_pages():
@@ -302,8 +311,20 @@ def inline(s):
     s = e(s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
     s = re.sub(r"\*(.+?)\*", r"<em>\1</em>", s)
-    s = re.sub(r"\[(.+?)\]\((.+?)\)", lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', s)
+    s = re.sub(r"\[(.+?)\]\((.+?)\)", md_link, s)
     return s
+
+
+def md_link(m):
+    """Markdown link. /go/<slug> partner links must exist in go_links and carry rel="sponsored"."""
+    text, href = m.group(1), m.group(2)
+    if href.startswith("/go/"):
+        slug = href[4:].strip("/")
+        assert slug in CFG.get("go_links", {}), f"guide links to unknown /go/ slug: {href}"
+        return f'<a href="/go/{slug}" rel="sponsored nofollow noopener">{text}</a>'
+    if href.startswith(("http://", "https://")) and not href.startswith(URL):
+        return f'<a href="{href}" rel="noopener">{text}</a>'
+    return f'<a href="{href}">{text}</a>'
 
 
 GUIDES = []  # (date, slug, meta, body_md), newest first
@@ -395,7 +416,7 @@ def build_legal():
 <p><b>What we collect:</b> if you join our email list or send an enquiry, we store the details you give us (such as your name, email address and the task you describe).</p>
 <p><b>Why:</b> to send you the emails you asked for, or to respond to your enquiry (legal basis: your consent and our legitimate interest in answering you). For build enquiries we may introduce you to a vetted partner, such as Digital One Agency; we only share your contact details with your agreement.</p>
 <p><b>Who processes it:</b> email sign-ups and enquiries are stored with our email provider, systeme.io. The site is hosted on Cloudflare. Some of these providers may process data outside your country under their own safeguards.</p>
-<p><b>Analytics:</b> we use Cloudflare Web Analytics, which counts visits without cookies and without tracking you across sites.</p>
+<p><b>Analytics:</b> we use Cloudflare Web Analytics, which counts visits without cookies and without tracking you across sites. When you click a partner link we count the click (the date, which link and which page of this site it was on). We do not store your IP address or anything that identifies you.</p>
 <p><b>How long:</b> we keep your details until you unsubscribe or ask us to delete them.</p>
 <p><b>Your rights:</b> you can unsubscribe at any time from any email, and ask us to see, correct or delete your data by emailing hello@understandaiwithme.com. If you are in the UK or EU you can also complain to your data protection authority (in the UK, the ICO).</p>
 <p>This site does not use advertising cookies. Affiliate partners may set their own cookies when you click through to their sites.</p></section>"""
@@ -530,7 +551,7 @@ def build_tools():
 def build_recommended():
     cards = "".join(
         f'<div class="tool-card"><span class="kicker">{e(r["cat"])}</span><h3>{e(r["name"])}</h3><p><b>{e(r["what"])}</b></p><p>{e(r["who"])}</p>'
-        f'<a class="btn" style="margin-top:8px;align-self:flex-start" href="{e(r["url"])}" rel="sponsored noopener">{e(r["cta"])}</a></div>'
+        f'<a class="btn" style="margin-top:8px;align-self:flex-start" href="{e(out_link(r))}" rel="sponsored nofollow noopener">{e(r["cta"])}</a></div>'
         for r in CFG.get("recommended", [])
     )
     body = f"""<section class="hero narrow"><div class="wrap"><p class="eyebrow">Recommended tools</p><h1>Tools worth paying for</h1>
@@ -579,7 +600,11 @@ def main():
     lastmod = {f"/guides/{s}/": m.get("updated", d) for d, s, m, _ in GUIDES}
     urls = "".join(f"<url><loc>{URL}{p}</loc><lastmod>{lastmod.get(p) or TODAY}</lastmod></url>" for p in paths)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>', encoding="utf-8")
-    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: {URL}/sitemap.xml\n", encoding="utf-8")
+    # Redirect table for the /go/<slug> click counter (functions/go/[offer].js imports it).
+    links = json.dumps(CFG.get("go_links", {}), indent=2, ensure_ascii=False)
+    (ROOT / "lib").mkdir(exist_ok=True)
+    (ROOT / "lib" / "go-links.js").write_text(f"// Generated by build.py from site.json go_links. Do not edit by hand.\nexport default {links};\n", encoding="utf-8")
+    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /go/\nSitemap: {URL}/sitemap.xml\n", encoding="utf-8")
     print(f"Built {len(paths)} pages into {OUT}")
 
 

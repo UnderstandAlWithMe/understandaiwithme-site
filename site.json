@@ -105,7 +105,8 @@
       "offer_name": "Caroola Accountancy",
       "offer_url": "https://caroolaaccountancy.sjv.io/VO9dQj",
       "cta": "Get a quote from Caroola",
-      "offer_region": "UK businesses"
+      "offer_region": "UK businesses",
+      "go": "caroola"
     },
     {
       "slug": "receipts-and-expenses",
@@ -180,7 +181,8 @@
       "who": "Businesses that want a custom AI workflow, app or website built for them.",
       "url": "https://digitaloneagency.com.au/?ref=REF-CONSTANT266",
       "cta": "Talk to the build team",
-      "cat": "Get it built"
+      "cat": "Get it built",
+      "go": "digital-one"
     },
     {
       "name": "systeme.io",
@@ -188,7 +190,8 @@
       "who": "Solo founders and small businesses that want email marketing and sales pages without paying for five tools.",
       "url": "https://systeme.io/?sa=sa02354726268caaf145ae81e81f76126d2c05e1c1",
       "cta": "Start free on systeme.io",
-      "cat": "Marketing"
+      "cat": "Marketing",
+      "go": "systeme"
     },
     {
       "name": "HappyScribe",
@@ -196,7 +199,8 @@
       "who": "Anyone who wants calls, meetings or voice notes turned into text, summaries and subtitles.",
       "url": "https://happyscribe.sjv.io/oNgMBO",
       "cta": "Try HappyScribe",
-      "cat": "AI tools"
+      "cat": "AI tools",
+      "go": "happyscribe"
     },
     {
       "name": "PixVerse",
@@ -204,7 +208,8 @@
       "who": "Small businesses making quick social videos and ads without a camera crew.",
       "url": "https://motivaiprivatelimited.sjv.io/m4JMbM",
       "cta": "Try PixVerse",
-      "cat": "AI tools"
+      "cat": "AI tools",
+      "go": "pixverse"
     },
     {
       "name": "Moosend",
@@ -212,7 +217,8 @@
       "who": "Businesses that want newsletters and automated follow-up emails without a big monthly bill.",
       "url": "https://trymoo.moosend.com/j8d6afok5fly",
       "cta": "Try Moosend",
-      "cat": "Marketing"
+      "cat": "Marketing",
+      "go": "moosend"
     },
     {
       "name": "Leadpages",
@@ -220,7 +226,8 @@
       "who": "Anyone who needs a page that turns visitors into enquiries or sign-ups.",
       "url": "https://try.leadpages.com/v5qk5qgej33j",
       "cta": "Try Leadpages",
-      "cat": "Marketing"
+      "cat": "Marketing",
+      "go": "leadpages"
     },
     {
       "name": "Caroola Accountancy",
@@ -228,7 +235,18 @@
       "who": "UK businesses that want returns, bookkeeping and deadlines handled.",
       "url": "https://caroolaaccountancy.sjv.io/VO9dQj",
       "cta": "Get a quote",
-      "cat": "Money"
+      "cat": "Money",
+      "go": "caroola"
     }
-  ]
+  ],
+  "go_links": {
+    "digital-one": "https://digitaloneagency.com.au/?ref=REF-CONSTANT266",
+    "systeme": "https://systeme.io/?sa=sa02354726268caaf145ae81e81f76126d2c05e1c1",
+    "happyscribe": "https://happyscribe.sjv.io/oNgMBO",
+    "pixverse": "https://motivaiprivatelimited.sjv.io/m4JMbM",
+    "moosend": "https://trymoo.moosend.com/j8d6afok5fly",
+    "leadpages": "https://try.leadpages.com/v5qk5qgej33j",
+    "caroola": "https://caroolaaccountancy.sjv.io/VO9dQj"
+  },
+  "go_note": "Every outbound offer link goes through /go/<slug> (functions/go/[offer].js counts the click, then redirects). Add new offers here and point tiles/recommended items at them with \"go\"."
 }

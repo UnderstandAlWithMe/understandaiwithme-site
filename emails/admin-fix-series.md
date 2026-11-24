@@ -1,7 +1,7 @@
 # Admin Fix email series (Systeme.io campaign "Admin Fix series")
 
 Sender: Constantin from UnderstandAIwithMe <hello@understandaiwithme.com>
-Trigger: anyone who opts in on https://mindriseco88.systeme.io/admin-fix (all "Send me the recommendation" / "Get the free series" buttons on the site).
+Trigger: anyone who opts in on https://mindriseco88.systeme.io/admin-fix (all "Get the free series" buttons on the site).
 Style: short, plain text, one link per email, sign off as Constantin. Systeme adds the unsubscribe link.
 
 ---
