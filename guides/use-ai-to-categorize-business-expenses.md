@@ -18,7 +18,7 @@ It is not good at knowing *why* you bought something. A restaurant bill could be
 
 ### 1. Export your transactions
 
-Most business bank accounts and accounting tools let you download transactions as a CSV or Excel file. Pick one period, such as a quarter or a tax year. Keep only the columns you need: date, description, amount and (if present) reference.
+Most business bank accounts and accounting tools let you download transactions as a CSV or Excel file. Pick one period, such as a quarter or a tax year. Keep only the columns you need: date, description, amount and (if present) reference. If business and personal spending share one account, this step takes longer every year; our guide on [whether sole traders need a business bank account](/guides/do-sole-traders-need-a-business-bank-account/) explains when to separate them.
 
 ### 2. Remove what the AI does not need to see
 

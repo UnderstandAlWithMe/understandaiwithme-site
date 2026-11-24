@@ -24,7 +24,7 @@ Shared cards are the main cause of mystery transactions. When each person has th
 - You can set limits per person or per category.
 - Spending appears as it happens, not at the end of the month.
 
-Many business bank accounts and expense tools offer extra cards, often with spending controls.
+Many business bank accounts and expense tools offer extra cards, often with spending controls. If you are a sole trader still running everything through a personal account, see [whether sole traders need a business bank account](/guides/do-sole-traders-need-a-business-bank-account/).
 
 ## Step 3: Capture receipts in an app
 

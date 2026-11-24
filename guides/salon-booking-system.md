@@ -3,6 +3,8 @@ title: How to Set Up a Salon Booking System With Automatic Reminders (No Coding)
 description: Set up a simple salon booking system: clients book themselves, get a confirmation and two reminders, and buffer time keeps your day workable.
 date: 2026-11-23
 tile: build-ai-automation
+video: 0OJn28OP4-M
+video_live: 2026-11-26T19:00:00Z
 ---
 Your phone buzzes mid-appointment. Someone wants to book, but you have scissors in your hand, and by the time you reply they may have gone elsewhere. Others book and then forget to turn up. A simple **salon booking system** fixes both problems: clients pick their own time on a booking page, get a confirmation straight away and get reminded before the appointment, while you keep working.
 

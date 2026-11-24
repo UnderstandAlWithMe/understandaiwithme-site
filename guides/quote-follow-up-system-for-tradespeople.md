@@ -3,6 +3,8 @@ title: A Free Quote Follow-Up System for Tradespeople (AI Writes the Emails)
 description: Build a free quote follow-up system: a quote request page, three polite AI-written emails and the one step that stops it chasing customers who said yes.
 date: 2026-11-22
 tile: build-ai-automation
+video: P3cHgHd8Ufs
+video_live: 2026-11-24T19:00:00Z
 ---
 You send a quote, the customer sounds keen, and then nothing. You mean to chase it, but you are on a job all day and by the evening it has slipped your mind again. A **quote follow-up system** fixes that. It sends a short thank-you straight away, then two polite check-ins over the next week, written in your own voice, while you get on with the work.
 
