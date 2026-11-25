@@ -247,7 +247,8 @@
     "moosend": "https://trymoo.moosend.com/j8d6afok5fly",
     "leadpages": "https://try.leadpages.com/v5qk5qgej33j",
     "caroola": "https://caroolaaccountancy.sjv.io/VO9dQj",
-    "fliki": "https://fliki.ai/?via=constantin-obreja"
+    "fliki": "https://fliki.ai/?via=constantin-obreja",
+    "fillout": "https://try.fillout.com/constantin-obreja-qods"
   },
   "go_note": "Every outbound offer link goes through /go/<slug> (functions/go/[offer].js counts the click, then redirects). Add new offers here and point tiles/recommended items at them with \"go\"."
 }
