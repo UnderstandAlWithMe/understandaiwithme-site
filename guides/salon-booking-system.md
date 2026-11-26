@@ -17,7 +17,7 @@ This guide shows hair salons, barbers, and nail and beauty studios how to set on
 - **Two automatic reminder emails**, one the day before and one an hour before.
 - **Buffer time and a daily limit**, so the page never books you back to back from opening to closing.
 
-We use the Systeme.io booking calendar in our video. Systeme.io is an all-in-one tool for web pages, emails and bookings, and its booking calendar page says the calendar is included on the free plan. Plans change, so check its pricing page before you start. Our [Systeme.io review](/guides/systeme-io-review-for-tradespeople/) covers the free plan's limits, including what the email reminders can't do. It is on our [recommended tools](/recommended-tools/) page. Any booking tool with reminders and buffer time works the same way.
+We use the Systeme.io booking calendar in our video. Systeme.io is an all-in-one tool for web pages, emails and bookings, and its booking calendar page says the calendar is included on the free plan. Plans change, so check its pricing page before you start. Our [Systeme.io review](/guides/systeme-io-review-for-tradespeople/) covers the free plan's limits, including what the email reminders can't do. If you want to follow along with the same tool, you can [open a free Systeme.io account](/go/systeme) (affiliate link: we may earn a commission at no extra cost to you). Any booking tool with reminders and buffer time works the same way.
 
 ## How to set up a salon booking system in five steps
 
