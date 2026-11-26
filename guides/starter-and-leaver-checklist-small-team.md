@@ -35,7 +35,7 @@ Turn your list into steps, in the order they need to happen.
 
 1. Walk them through where files live and how to ask for access to more.
 2. Turn on two-step verification for their key accounts.
-3. Confirm they appear correctly in payroll and leave tracking before the first pay run.
+3. Confirm they appear correctly in payroll and leave tracking before the first pay run. (In the UK, see whether [payroll on a spreadsheet still works for you](/guides/payroll-spreadsheet-vs-software/).)
 
 ## Step 3: Build the leaver checklist
 

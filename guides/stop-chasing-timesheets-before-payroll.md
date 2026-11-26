@@ -80,7 +80,7 @@ Elsewhere, check your local government business or employment site. A time-track
 
 ## When to move to proper software
 
-If you are still re-typing hours from one system into another, or spending more than an hour each pay period on timesheets, look at payroll and HR software with time tracking built in. Hours flow straight into the pay run, staff can see their own records, and the history is kept for you.
+If you are still re-typing hours from one system into another, or spending more than an hour each pay period on timesheets, look at payroll and HR software with time tracking built in (our guide to [payroll on a spreadsheet or software](/guides/payroll-spreadsheet-vs-software/) explains what UK payroll software must do). Hours flow straight into the pay run, staff can see their own records, and the history is kept for you.
 
 ## The short version
 
