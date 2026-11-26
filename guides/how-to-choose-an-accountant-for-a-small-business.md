@@ -61,7 +61,7 @@ Elsewhere, look for your national tax authority's guidance on choosing a tax pro
 
 Send the same short brief from Step 1 to two or three accountants and compare what is included, not just the price. A cheaper plan with lots of extras can end up costing more.
 
-If you run a UK business and want a fixed monthly fee, Caroola Accountancy is the online accountant on our [recommended tools](https://understandaiwithme.com/recommended-tools/) page.
+If you run a UK business and want a fixed monthly fee, [Caroola Accountancy](/go/caroola) is the online accountant we recommend (affiliate link: we may earn a fee if you sign up, at no extra cost to you). Its own pricing page (checked 25 November 2026) lists self-employed plans from £28 + VAT a month for the first 12 months after a 28-day free trial, then from £40 + VAT, with no fixed contract and Self Assessment filing included. Check the current price on its site before you sign up.
 
 ## Step 6: Make the handover easy
 

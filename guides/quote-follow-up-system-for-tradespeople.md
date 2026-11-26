@@ -17,7 +17,7 @@ A quote that goes quiet is often not a no. It is a busy customer who needed one 
 - **One automation rule** that starts the emails when someone fills in the form. An automation rule is simply an "if this happens, do that" instruction.
 - A **weekly check** so a person, not a machine, handles anyone who goes quiet.
 
-You need an email tool that can send a sequence of emails on a timer. We use Systeme.io in our video because its free plan includes one email campaign (a set of emails sent in order) and one automation rule, which is all this needs. Any email marketing tool with automations works the same way. You can find it on our [recommended tools](/recommended-tools/) page, and our [Systeme.io review](/guides/systeme-io-review-for-tradespeople/) explains what the free plan can and can't do.
+You need an email tool that can send a sequence of emails on a timer. We use Systeme.io in our video because its free plan includes one email campaign (a set of emails sent in order) and one automation rule, which is all this needs. Any email marketing tool with automations works the same way. If you want to use the same tool, you can [start free on Systeme.io](/go/systeme) (affiliate link: we may earn a commission at no extra cost to you), and our [Systeme.io review](/guides/systeme-io-review-for-tradespeople/) explains what the free plan can and can't do.
 
 ## How to build a quote follow-up system in five steps
 

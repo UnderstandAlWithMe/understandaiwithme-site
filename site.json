@@ -230,6 +230,24 @@
       "go": "leadpages"
     },
     {
+      "name": "Fillout",
+      "what": "Online forms with a free plan: quote requests, enquiries and bookings that land in your inbox.",
+      "who": "Trades and service businesses that want a proper quote-request form on their website or social profiles.",
+      "url": "https://try.fillout.com/understandaiwithme",
+      "cta": "Make a free form on Fillout",
+      "cat": "Marketing",
+      "go": "fillout"
+    },
+    {
+      "name": "Fliki",
+      "what": "Turns a written script into a voiced video with stock footage and captions. We make our own YouTube videos with it.",
+      "who": "Small businesses that want simple explainer or social videos without filming themselves.",
+      "url": "https://fliki.ai/?via=constantin-obreja",
+      "cta": "Try Fliki",
+      "cat": "AI tools",
+      "go": "fliki"
+    },
+    {
       "name": "Caroola Accountancy",
       "what": "Online accountants on a fixed monthly fee.",
       "who": "UK businesses that want returns, bookkeeping and deadlines handled.",
