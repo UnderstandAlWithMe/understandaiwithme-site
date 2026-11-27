@@ -359,6 +359,12 @@ def video_block(meta):
 <script>(function(){{var b=document.getElementById("guide-video");var l=b.getAttribute("data-live");if(l&&Date.now()<Date.parse(l))return;b.querySelector(".frame").innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+b.getAttribute("data-id")+'" title="Watch the video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';b.hidden=false;}})();</script>"""
 
 
+def signup_card():
+    """Admin Fix email opt-in shown at the end of every guide (27 Nov 2026).
+    Copy matches the approved opt-in page v2: no promises the series does not keep."""
+    return f'''<div class="card signup"><p class="eyebrow">Free email series</p><h3>Want the next fix in your inbox?</h3><p>Six short emails over two weeks, each with one admin fix you can set up the same day: ready-to-copy follow-up and reminder messages, and the free tool for each job.</p><a class="btn" href="{CFG['email_signup_url']}">Send me the free series</a><p class="small">Free. Unsubscribe in one click. Some emails recommend tools we may earn a commission from; it never changes your price.</p></div>'''
+
+
 def build_guides():
     paths = []
     tiles = {t["slug"]: t for t in CFG["tiles"]}
@@ -377,6 +383,7 @@ def build_guides():
 <p class="meta">By <a href="/about/">Constantin</a> &middot; {e(d)} &middot; {mins} min read</p>
 {video_block(meta)}
 {md_to_html(md)}
+{signup_card()}
 {cta}
 <p class="small">Want numbers for your own business? Try the <a href="/tools/admin-time-calculator/">admin time calculator</a> or the <a href="/tools/ai-readiness-quiz/">AI readiness quiz</a>.</p>
 <h2>More guides</h2>
