@@ -40,7 +40,7 @@ Now each email starts with one line from you:
 
 You get a draft in your voice. Edit, then send.
 
-If quotes are the emails you most often forget to chase, our [quote follow-up system for tradespeople](/guides/quote-follow-up-system-for-tradespeople/) sends them for you on a timer.
+If quotes are the emails you most often forget to chase, our [quote follow-up system for tradespeople](/guides/quote-follow-up-system-for-tradespeople/) sends them for you on a timer. And if the email you need to write follows a phone call, our guide to [turning customer calls into notes and a follow-up email](/guides/turn-customer-calls-into-notes-and-follow-up-emails/) uses your tone note to reply in minutes.
 
 ## Step 5: Keep it safe
 

@@ -29,6 +29,8 @@ Put the page link where customers already find you: your Google Business Profile
 
 If you already send quotes from job software, you can skip the page and add customers to the sequence by hand when you send each quote.
 
+If most of your quote requests arrive by phone, our guide to [turning customer calls into notes and a follow-up email](/guides/turn-customer-calls-into-notes-and-follow-up-emails/) makes sure the quote covers everything the customer asked for.
+
 ### Step 2: Let AI write the three emails
 
 Open ChatGPT, Claude or another AI assistant. If you have already written a short "how we write" note (see our guide to [AI emails in your own voice](/guides/ai-email-templates-for-small-business/)), paste it in first. Then paste this prompt and change the details to fit your trade:
