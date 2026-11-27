@@ -1,6 +1,6 @@
 ---
 title: How to Turn Customer Calls Into Notes and a Follow-Up Email With AI
-description: Turn customer calls into notes and a follow-up email with AI: record with permission, get a transcript, build a job checklist and send a reply that shows you listened.
+description: Turn customer calls into notes and a follow-up email with AI: record with permission, build a job checklist and reply in a way that shows you listened.
 date: 2026-11-27
 tile: build-ai-automation
 video: vzX-mwYrmXA
