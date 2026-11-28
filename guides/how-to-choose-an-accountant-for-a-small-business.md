@@ -10,6 +10,9 @@ A good accountant saves you admin and keeps you on top of deadlines. A poor fit 
 
 ## Step 1: Decide what you actually need
 
+If you are a UK sole trader and not sure you need an accountant at all, start with our [5-minute check: do I need an accountant as a sole trader?](/guides/do-i-need-an-accountant-as-a-sole-trader/)
+
+
 Before you contact anyone, write a short list of what you want help with. Common jobs include:
 
 - Annual tax returns for you and the business.

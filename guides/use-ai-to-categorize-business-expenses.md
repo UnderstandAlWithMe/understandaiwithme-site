@@ -69,6 +69,8 @@ Categorizing your bank lines does not replace keeping receipts and invoices. Tax
 
 Elsewhere, check your local tax authority or government business site.
 
+UK sole trader deciding whether to file your own return or hand it over? Our [5-minute check: do I need an accountant as a sole trader?](/guides/do-i-need-an-accountant-as-a-sole-trader/) walks through it.
+
 ## Common mistakes to avoid
 
 1. **Letting the AI decide what is tax-deductible.** Ask it to categorize, not to rule on deductions.

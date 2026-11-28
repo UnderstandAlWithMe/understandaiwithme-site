@@ -47,6 +47,8 @@ Once a week, look for transactions without a receipt and chase them while people
 
 Receipt-capture tools increasingly use AI to read the supplier, date, amount and sales tax (VAT or GST) from a photo. You can also ask an AI assistant to help write a short expenses policy for your team. Ask it for "a one-page expenses policy for a 10-person business, covering limits, receipts and approvals", then edit it to fit.
 
+If you are a UK sole trader and tidy receipts are the last thing before your tax return, our [5-minute check: do I need an accountant as a sole trader?](/guides/do-i-need-an-accountant-as-a-sole-trader/) helps you decide whether to file it yourself.
+
 ## The short version
 
 - Photo the receipt at the till.
